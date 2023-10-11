@@ -1,4 +1,15 @@
-Ejercicios - Desarrolando algoritmos 2
+Ejercicios Javascript - Desarrolando algoritmos 1
+-------------------------------------
+Ejercicio1 => [x]
+Ejercicio2 => [x]
+Ejercicio3 => [x]
+Ejercicio4 => [x]
+Ejercicio5 => [x]
+Ejercicio6 => [x]
+Ejercicio7 => [x]
+Ejercicio8 => [x] 
+
+Ejercicios Javascript - Desarrolando algoritmos 2
 -------------------------------------
 Ejercicio1 => [x]
 Ejercicio2 => [x]
@@ -9,7 +20,7 @@ Ejercicio6 => [ ] No terminado. Faltan dos puntos.
 Ejercicio7 => [x]
 Ejercicio8 => [x] Terminado pero mejorable aplicando Expressions Regulars 
 
-Ejercicios - Desarrolando algoritmos 3
+Ejercicios Javascript - Desarrolando algoritmos 3
 -------------------------------------
 Ejercicio1 => [x]
 Ejercicio2 => [x]
