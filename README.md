@@ -1,4 +1,4 @@
-<h3> ⚙️ &nbsp;Ejercicios FSWD </h3>
+<h3> ⚙️ Ejercicios FSWD </h3>
 
 <h5>Javascript - Desarrollando algoritmos 1</h5>
   - [ ] Ejercicio 1
