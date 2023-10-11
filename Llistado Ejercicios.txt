@@ -1,22 +1,22 @@
-Exercicis - Desarrolando algoritmos 2
+Ejercicios - Desarrolando algoritmos 2
 -------------------------------------
-Exerici1 => [x]
-Exerici2 => [x]
-Exerici3 => [ ] No acabat. Problemes.
-Exerici4 => [x]
-Exerici5 => [x]
-Exerici6 => [ ] No acabat. Faltes dos punts.
-Exerici7 => [x]
-Exerici8 => [x] Acabat però millorable aplicant Expressions Regulars 
+Ejercicio1 => [x]
+Ejercicio2 => [x]
+Ejercicio3 => [ ] No acabat. Problemes.
+Ejercicio4 => [x]
+Ejercicio5 => [x]
+Ejercicio6 => [ ] No acabat. Faltes dos punts.
+Ejercicio7 => [x]
+Ejercicio8 => [x] Acabat però millorable aplicant Expressions Regulars 
 
-Exercicis - Desarrolando algoritmos 3
+Ejercicios - Desarrolando algoritmos 3
 -------------------------------------
-Exerici1 => [x]
-Exerici2 => [x]
-Exerici3 => [x]
-Exerici4 => [x] Pendent Bonus
-Exerici5 => [x]
-Exerici6 => [x]
-Exerici7 => [x]
-Exerici8 => [ ] Pendent
-Exerici9 => [ ] En curs...
+Ejercicio1 => [x]
+Ejercicio2 => [x]
+Ejercicio3 => [x]
+Ejercicio4 => [x] Pendent Bonus
+Ejercicio5 => [x]
+Ejercicio6 => [x]
+Ejercicio7 => [x]
+Ejercicio8 => [ ] Pendent
+Ejercicio9 => [ ] En curs...

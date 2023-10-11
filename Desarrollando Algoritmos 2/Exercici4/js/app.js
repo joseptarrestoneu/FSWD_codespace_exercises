@@ -1,3 +1,4 @@
+// Ejercicio 4
 // Escribe un programa con 7 variables con la temperatura de los 
 // 7 últimos días (Google). A continuación, muestra cuál ha sido la temperatura media.
 

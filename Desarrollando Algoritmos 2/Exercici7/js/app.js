@@ -1,4 +1,4 @@
-// Ejercicio - Playing games
+// Ejercicio 7 - Playing games
 // Mediante el objeto Math, genera un número aleatorio entero entre 0 y 10, y guárdalo en una variable.
 // A continuación pide al usuario que adivine el número. Tendrá como máximo 3 intentos. El
 // programa debe mostrar el número de intentos disponibles. Si acierta, mostramos el mensaje: You
