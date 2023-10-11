@@ -1,4 +1,36 @@
-<h3> 🛠 &nbsp;Tech Stack</h3>
+<h3> ⚙️ &nbsp;Ejercicios FSWD </h3>
+
+| Tema                          | Ejercicios    |
+|:------------------------------|:-------------:|
+| Desarrollando algoritmos 2    | Ejercicio1[ ] |
+|                               | Ejercicio2[ ] |
+|                               | Ejercicio3[ ] |
+|                               | Ejercicio4[ ] |
+|                               | Ejercicio5[ ] |
+|                               | Ejercicio6[ ] |
+|                               | Ejercicio7[ ] |
+|                               | Ejercicio8[ ] |
+| Desarrollando algoritmos 3    | Ejercicio1[ ] |
+|                               | Ejercicio2[ ] |
+|                               | Ejercicio3[ ] |
+|                               | Ejercicio4[ ] |
+|                               | Ejercicio5[ ] |
+|                               | Ejercicio6[ ] |
+|                               | Ejercicio7[ ] |
+|                               | Ejercicio8[ ] |
+|                               | Ejercicio9[ ] |
+
+
+
+<h3> 🤝🏻 &nbsp;Connect with Me </h3>
+
+<p align="center">
+<a href="https://www.linkedin.com/in/josep-tarrés-toneu-63003040/"><img alt="Instagram" src="https://img.shields.io/badge/LinkedIn-Josep Tarrés-blue?style=flat-square&logo=linkedin"></a>
+  <a href="https://www.instagram.com/joseptarres/"><img alt="Instagram" src="https://img.shields.io/badge/Instagram-joseptarres-blue?style=flat-square&logo=instagram"></a>
+<a href="mailto:joseptarrestoneu@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-joseptarrestoneu@gmail.com-blue?style=flat-square&logo=gmail"></a>
+</p>
+
+<h3> 🛠 &nbsp;My skills</h3>
 
 - 💻 &nbsp;
   ![HTML5](https://img.shields.io/badge/-HTML5-333333?style=flat&logo=HTML5)
@@ -16,11 +48,3 @@
   ![Markdown](https://img.shields.io/badge/-Markdown-333333?style=flat&logo=markdown)
 - 🔧 &nbsp;
   ![Visual Studio Code](https://img.shields.io/badge/-Visual%20Studio%20Code-333333?style=flat&logo=visual-studio-code&logoColor=007ACC)
-
-<h3> 🤝🏻 &nbsp;Connect with Me </h3>
-
-<p align="center">
-<a href="https://www.linkedin.com/in/josep-tarrés-toneu-63003040/"><img alt="Instagram" src="https://img.shields.io/badge/LinkedIn-Josep Tarrés-blue?style=flat-square&logo=linkedin"></a>
-  <a href="https://www.instagram.com/joseptarres/"><img alt="Instagram" src="https://img.shields.io/badge/Instagram-joseptarres-blue?style=flat-square&logo=instagram"></a>
-<a href="mailto:joseptarrestoneu@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-joseptarrestoneu@gmail.com-blue?style=flat-square&logo=gmail"></a>
-</p>
