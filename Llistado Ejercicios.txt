@@ -1,0 +1,22 @@
+Exercicis - Desarrolando algoritmos 2
+-------------------------------------
+Exerici1 => [x]
+Exerici2 => [x]
+Exerici3 => [ ] No acabat. Problemes.
+Exerici4 => [x]
+Exerici5 => [x]
+Exerici6 => [ ] No acabat. Faltes dos punts.
+Exerici7 => [x]
+Exerici8 => [x] Acabat però millorable aplicant Expressions Regulars 
+
+Exercicis - Desarrolando algoritmos 3
+-------------------------------------
+Exerici1 => [x]
+Exerici2 => [x]
+Exerici3 => [x]
+Exerici4 => [x] Pendent Bonus
+Exerici5 => [x]
+Exerici6 => [x]
+Exerici7 => [x]
+Exerici8 => [ ] Pendent
+Exerici9 => [ ] En curs...

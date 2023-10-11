@@ -1,0 +1,61 @@
+:root{
+    font-size: .785;
+    font-family: 'Inconsolata', monospace;
+    --black: #000;
+    --blue: #0d6ef2;
+    --cyan: #0dcaf0;
+    --green: #198754;
+    --indigo: #6610f2;
+    --orange: #fd7e14;
+    --puerple: #6f42c1;
+    --pink: #d63384;
+    --red: #dc3545;
+    --teal: #20c997;
+    --yellow: #ffc107;
+    box-sizing: border-box;
+}
+
+*, ::before, ::after {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    width: 100%;
+}
+
+
+form {
+    padding: 1rem;
+    margin: 25% auto 2%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--cyan);
+}
+
+input {
+    margin: 1em;
+    height: 30px;
+}
+
+div {
+    margin: 2% auto;
+    padding: 1%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    text-align: center;
+}
+
+.green {
+    background-color: #198754;
+}
+
+.red {
+    background-color: red;
+}
