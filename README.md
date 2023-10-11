@@ -2,23 +2,23 @@
 
 | Tema                          | Ejercicios       |
 |:------------------------------|:----------------:|
-| Desarrollando algoritmos 2    | - [ ] Ejercicio1 |
-|                               | - [ ] Ejercicio2 |
-|                               | - [ ] Ejercicio3 |
-|                               | - [ ] Ejercicio4 |
-|                               | - [ ] Ejercicio5 |
-|                               | - [ ] Ejercicio6 |
-|                               | - [ ] Ejercicio7 |
-|                               | - [ ] Ejercicio8 |
-| Desarrollando algoritmos 3    | - [ ] Ejercicio1 |
-|                               | - [ ] Ejercicio2 |
-|                               | - [ ] Ejercicio3 |
-|                               | - [ ] Ejercicio4 |
-|                               | - [ ] Ejercicio5 |
-|                               | - [ ] Ejercicio6 |
-|                               | - [ ] Ejercicio7 |
-|                               | - [ ] Ejercicio8 |
-|                               | - [ ] Ejercicio9 |
+| Desarrollando algoritmos 2    | [ ] Ejercicio1 |
+|                               | [ ] Ejercicio2 |
+|                               | [ ] Ejercicio3 |
+|                               | [ ] Ejercicio4 |
+|                               | [ ] Ejercicio5 |
+|                               | [ ] Ejercicio6 |
+|                               | [ ] Ejercicio7 |
+|                               | [ ] Ejercicio8 |
+| Desarrollando algoritmos 3    | [ ] Ejercicio1 |
+|                               | [ ] Ejercicio2 |
+|                               | [ ] Ejercicio3 |
+|                               | [ ] Ejercicio4 |
+|                               | [ ] Ejercicio5 |
+|                               | [ ] Ejercicio6 |
+|                               | [ ] Ejercicio7 |
+|                               | [ ] Ejercicio8 |
+|                               | [ ] Ejercicio9 |
 
 
 
