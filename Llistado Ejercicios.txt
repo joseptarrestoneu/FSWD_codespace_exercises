@@ -2,21 +2,21 @@ Ejercicios - Desarrolando algoritmos 2
 -------------------------------------
 Ejercicio1 => [x]
 Ejercicio2 => [x]
-Ejercicio3 => [ ] No acabat. Problemes.
+Ejercicio3 => [ ] No terminado. Problemas.
 Ejercicio4 => [x]
 Ejercicio5 => [x]
-Ejercicio6 => [ ] No acabat. Faltes dos punts.
+Ejercicio6 => [ ] No terminado. Faltan dos puntos.
 Ejercicio7 => [x]
-Ejercicio8 => [x] Acabat però millorable aplicant Expressions Regulars 
+Ejercicio8 => [x] Terminado pero mejorable aplicando Expressions Regulars 
 
 Ejercicios - Desarrolando algoritmos 3
 -------------------------------------
 Ejercicio1 => [x]
 Ejercicio2 => [x]
 Ejercicio3 => [x]
-Ejercicio4 => [x] Pendent Bonus
+Ejercicio4 => [x] Pendiente Bonus
 Ejercicio5 => [x]
 Ejercicio6 => [x]
 Ejercicio7 => [x]
-Ejercicio8 => [ ] Pendent
-Ejercicio9 => [ ] En curs...
+Ejercicio8 => [ ] Pendiente
+Ejercicio9 => [ ] En curso...
