@@ -1,24 +1,22 @@
 <h3> ⚙️ &nbsp;Ejercicios FSWD </h3>
 
-| Tema                          | Ejercicios       |
-|:------------------------------|:----------------:|
-| Desarrollando algoritmos 2    | - [x] Ejercicio1 |
-|                               | - [ ] Ejercicio2 |
-|                               | - [ ] Ejercicio3 |
-|                               | - [ ] Ejercicio4 |
-|                               | - [ ] Ejercicio5 |
-|                               | - [ ] Ejercicio6 |
-|                               | - [ ] Ejercicio7 |
-|                               | - [ ] Ejercicio8 |
-| Desarrollando algoritmos 3    | - [ ] Ejercicio1 |
-|                               | - [ ] Ejercicio2 |
-|                               | - [ ] Ejercicio3 |
-|                               | - [ ] Ejercicio4 |
-|                               | - [ ] Ejercicio5 |
-|                               | - [ ] Ejercicio6 |
-|                               | - [ ] Ejercicio7 |
-|                               | - [ ] Ejercicio8 |
-|                               | - [ ] Ejercicio9 |
+Desarrollando algoritmos 2    - [x] Ejercicio1
+                              - [ ] Ejercicio2
+                              - [ ] Ejercicio3
+                              - [ ] Ejercicio4
+                              - [ ] Ejercicio5
+                              - [ ] Ejercicio6
+                              - [ ] Ejercicio7
+                              - [ ] Ejercicio8
+Desarrollando algoritmos 3    - [ ] Ejercicio1
+                              - [ ] Ejercicio2
+                              - [ ] Ejercicio3
+                              - [ ] Ejercicio4
+                              - [ ] Ejercicio5
+                              - [ ] Ejercicio6
+                              - [ ] Ejercicio7
+                              - [ ] Ejercicio8
+                              - [ ] Ejercicio9
 
 
 <h3> 🤝🏻 &nbsp;Connect with Me </h3>
