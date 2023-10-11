@@ -1,7 +1,7 @@
 <h3> ⚙️ &nbsp;Ejercicios FSWD </h3>
 
 <h5>Desarrollando algoritmos 2</h5>
-- [x] Ejercicio 1
+(- [x]) Ejercicio 1
 - [ ] Ejercicio 2
 - [ ] Ejercicio 3
 - [ ] Ejercicio 4
