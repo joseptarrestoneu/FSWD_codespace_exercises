@@ -1,25 +1,24 @@
 @import './reset';
 @import './variables';
 @import './maps';
-
-@function rubik-weight($weight){
-    @return map-get($rubik-font-weight, $weight);
-}
-@function titilliu-weight($weight){
-    @return map-get($titillium-font-weight, $weight);
-}
+@import './functions';
+@import './mixin';
 
 body {
+    @include flexCenter(flex-end);
     background-color: $green;
     width: $full-width;
     height: $full-height;
     color: $dark;
-    font-family: 'Titillium Web', sans-serif;
     .main{
         width: 80%;
-        margin: 2em auto;
+        // margin: 2em auto;
+        border: 1px solid $dark;
+        border-radius: .3rem;
+
         &-header{
             font-size: map-get($font-sizes, xx-large );
+            font-family: font-family(Titillium);
             transition: color .3s ease-in-out;
             font-weight: titilliu-weight("Black");
             &:hover {
@@ -27,10 +26,15 @@ body {
             }
         }
         p{
+            font-family: font-family(Rubik);
             color: $white;
-            font-family: 'Rubik', sans-serif;
             font-weight: map-get($titillium-font-weight, Light);
             font-size: map-get($font-sizes, large );
+        }
+        @for $i from 1 through length($rainbow) {
+            p:nth-child(#{$i+1}){
+                background-color: nth($rainbow, $i );
+            }
         }
     }
 }
