@@ -1,0 +1,36 @@
+@import './reset';
+@import './variables';
+@import './maps';
+
+@function rubik-weight($weight){
+    @return map-get($rubik-font-weight, $weight);
+}
+@function titilliu-weight($weight){
+    @return map-get($titillium-font-weight, $weight);
+}
+
+body {
+    background-color: $green;
+    width: $full-width;
+    height: $full-height;
+    color: $dark;
+    font-family: 'Titillium Web', sans-serif;
+    .main{
+        width: 80%;
+        margin: 2em auto;
+        &-header{
+            font-size: map-get($font-sizes, xx-large );
+            transition: color .3s ease-in-out;
+            font-weight: titilliu-weight("Black");
+            &:hover {
+                color: $orange;
+            }
+        }
+        p{
+            color: $white;
+            font-family: 'Rubik', sans-serif;
+            font-weight: map-get($titillium-font-weight, Light);
+            font-size: map-get($font-sizes, large );
+        }
+    }
+}
