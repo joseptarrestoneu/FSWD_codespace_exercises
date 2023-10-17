@@ -4,7 +4,21 @@
 @import './functions';
 @import './mixin';
 
+$header: "";
+$start: 1;
+$limit: 6;
+@while $start <= $limit {
+    $header: $header + h#{$start}+ ", ";
+    $start: $start + 1;
+}
+#{$header}{
+    font-family: font-family(Titillium);
+}
+
 body {
+    &.light{
+        @include theme(true);
+    }
     @include flexCenter(flex-end);
     background-color: $green;
     width: $full-width;
@@ -31,9 +45,30 @@ body {
             font-weight: map-get($titillium-font-weight, Light);
             font-size: map-get($font-sizes, large );
         }
-        @for $i from 1 through length($rainbow) {
-            p:nth-child(#{$i+1}){
+        @for $i from -(length($rainbow)) through -1 {
+            p:nth-child(#{-$i}){
                 background-color: nth($rainbow, $i );
+            }
+        }
+        .message {
+            padding: .8em 1.5em;
+            border-radius: .7rem;
+            width: 70%;
+            margin: 1em auto;
+        }
+        .message-info {
+            @extend .message;
+            color: darken($blue, 25%);
+            background-color: lighten($blue, 20%);
+        }
+        .message-danger {
+            @extend .message;
+            color: darken($red, 25%);
+            background-color: lighten($red, 20%);
+        }
+        @each $header, $value in $header-size {
+            #{$header}{
+                font-size: #{$value};
             }
         }
     }

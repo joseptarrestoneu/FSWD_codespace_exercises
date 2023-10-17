@@ -1,6 +1,14 @@
-
 @mixin flexCenter($justify){
     display: flex;
     justify-content: $justify;
     align-items: center;
+}
+
+@mixin theme($light-theme: true) {
+    @if ($light-theme) {
+        background-color: lighten($green, 50%);
+        p{
+            color: darken($dark, 100%) !important;
+        }
+    }
 }

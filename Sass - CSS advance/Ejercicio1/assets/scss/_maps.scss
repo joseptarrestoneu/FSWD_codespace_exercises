@@ -23,6 +23,13 @@ $rubik-font-weight:(
     "ExtraBold":800,
     "Black":900
 );
-$rainbow:(
-    $puerple, $cyan, $green, $yellow, $orange
-)
+//Lista
+$rainbow:( $puerple, $cyan, $green, $yellow, $orange );
+$header-size: (
+    "h1": 3.5rem,
+    "h2": 2.25rem,
+    "h3": 1.5rem,
+    "h4": 1.1rem,
+    "h5": 0.9rem,
+    "h6": 0.7rem,
+);

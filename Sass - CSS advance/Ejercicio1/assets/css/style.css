@@ -6,6 +6,10 @@
   outline: 0 none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Titillium Web", sans-serif;
+}
+
 body {
   display: flex;
   justify-content: flex-end;
@@ -14,6 +18,12 @@ body {
   width: 100vw;
   height: 100vh;
   color: #292a2b;
+}
+body.light {
+  background-color: #aff0d2;
+}
+body.light p {
+  color: black !important;
 }
 body .main {
   width: 80%;
@@ -35,18 +45,50 @@ body .main p {
   font-weight: 300;
   font-size: 1.5rem;
 }
-body .main p:nth-child(2) {
+body .main p:nth-child(5) {
   background-color: #6f42c1;
 }
-body .main p:nth-child(3) {
+body .main p:nth-child(4) {
   background-color: #0dcaf0;
 }
-body .main p:nth-child(4) {
+body .main p:nth-child(3) {
   background-color: #198754;
 }
-body .main p:nth-child(5) {
+body .main p:nth-child(2) {
   background-color: #ffc107;
 }
-body .main p:nth-child(6) {
+body .main p:nth-child(1) {
   background-color: #fd7e14;
+}
+body .main .message, body .main .message-danger, body .main .message-info {
+  padding: 0.8em 1.5em;
+  border-radius: 0.7rem;
+  width: 70%;
+  margin: 1em auto;
+}
+body .main .message-info {
+  color: #073779;
+  background-color: #6ea8f7;
+}
+body .main .message-danger {
+  color: #7c151f;
+  background-color: #eb8c95;
+}
+body .main h1 {
+  font-size: 3.5rem;
+}
+body .main h2 {
+  font-size: 2.25rem;
+}
+body .main h3 {
+  font-size: 1.5rem;
+}
+body .main h4 {
+  font-size: 1.1rem;
+}
+body .main h5 {
+  font-size: 0.9rem;
+}
+body .main h6 {
+  font-size: 0.7rem;
 }/*# sourceMappingURL=style.css.map */
