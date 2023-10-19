@@ -1,0 +1,6 @@
+@import './variables';
+@import './maps';
+
+.weekTitle > div {
+    font-size: map-get($font-sizes, initial);
+}
