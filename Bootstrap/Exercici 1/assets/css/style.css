@@ -1,3 +1,59 @@
+body {
+  padding-top: 10%;
+}
+
+#calendar {
+  margin-left: 5rem;
+  margin-right: 5rem;
+  font-size: 0.65rem;
+}
+
 .weekTitle > div {
   font-size: 0.65rem;
+}
+
+.cell {
+  height: 20px;
+}
+
+.cell1 {
+  height: 25px;
+}
+
+.cite {
+  background-color: #e3d6ac;
+  padding-top: 2px;
+  border: 1px solid #292a2b;
+  border-radius: 4px;
+  margin-left: 10px;
+  margin-right: 10px;
+  z-index: 1;
+  height: 50px;
+  font-size: 0.65rem;
+}
+
+.cite i {
+  margin-left: 1px;
+}
+
+a {
+  text-decoration: none;
+  color: #292a2b;
+}
+
+#calendar a:hover {
+  background-color: #e7e7e7;
+}
+
+.fa-sharp {
+  color: #dc3545;
+  font-weight: bolder;
+}
+
+.fa-circle-check {
+  color: #198754;
+}
+
+.fa-clock {
+  color: #0d6ef2;
 }/*# sourceMappingURL=style.css.map */

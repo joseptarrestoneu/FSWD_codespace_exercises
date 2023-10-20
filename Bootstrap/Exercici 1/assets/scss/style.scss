@@ -1,6 +1,62 @@
 @import './variables';
 @import './maps';
 
+body {
+    padding-top: 10%;
+}
+
+#calendar {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    font-size: map-get($font-sizes, initial);
+}
+
 .weekTitle > div {
     font-size: map-get($font-sizes, initial);
+}
+
+.cell {
+    height: 20px;    
+}
+
+.cell1 {
+    height: 25px;    
+}
+
+.cite {
+    background-color: $target;
+    padding-top: 2px;
+    border: 1px solid $dark;
+    border-radius: 4px;
+    margin-left: 10px;
+    margin-right: 10px;
+    z-index: 1;
+    height: 50px;
+    font-size: map-get($font-sizes, initial);
+}
+
+.cite i {
+    margin-left: 1px;
+}
+
+a {
+    text-decoration:none;
+    color: $dark;
+}
+
+#calendar a:hover {
+    background-color: #e7e7e7;
+}
+
+.fa-sharp {
+    color: $red;
+    font-weight: bolder;
+}
+
+.fa-circle-check {
+    color: $green;
+}
+
+.fa-clock {
+    color: $blue;
 }

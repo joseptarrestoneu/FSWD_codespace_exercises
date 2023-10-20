@@ -47,51 +47,63 @@ function month(value) {
     return monthName  
 }
 
+// Crear fechas calendario
+function monthCalendar(year, actualMonth) {
+    let month = actualMonth
+    let counter2 = 0;
+    for (let j = month-1; j < month+2; j++) {
+        let date = new Date(year, j, 1);
+        let lastDayMonth = new Date(date.getFullYear(), date.getMonth()+1,0);
+        let monthCalendar = date.getMonth();
+        const firstDateWeek = (new Date(date.getFullYear(), monthCalendar, 1)).getDay();
+        let dateWeek = 0;
+        switch (firstDateWeek) {
+            case 0:
+                dateWeek = 7;
+                break;
+            case 1:
+                dateWeek = 1;
+                break;
+            case 2:
+                dateWeek = 2;
+                break;
+            case 3:
+                dateWeek = 3;
+                break;
+            case 4:
+                dateWeek = 4;
+                break;
+            case 5:
+                dateWeek = 5;
+                break;
+            case 6:
+                dateWeek = 6;
+                break;
+            default:
+                console.log("Error")
+        }  
+        
+        let counter = 1;
+        for (let i = dateWeek; i < (dateWeek+lastDayMonth.getDate()); i++) {
+            div = document.getElementById(`cell${i}_month-${counter2}`);
+            div.innerHTML = counter;
+            actualDate = new Date(year, j, counter+1).toISOString();
+            div.classList.add(actualDate)
+            counter++;
+        }
+        counter2++;
+    }
+}
+
 let divActualMonth = document.getElementById("actualMonth");
 let divMonth1 = document.getElementById("month-1");
 let divMonth2 = document.getElementById("month+1");
 
 divActualMonth.innerHTML = `${month(actualMonth)}`;
+divActualMonth.classList.add(`${month(actualMonth)}`);
 divMonth1.innerHTML = `${month(actualMonth-1)}`;
+divMonth1.classList.add(`${month(actualMonth-1)}`);
 divMonth2.innerHTML = `${month(actualMonth+1)}`;
+divMonth2.classList.add(`${month(actualMonth+1)}`);
 
-// Crear fechas calendario
-let lastDayActualMonth = new Date(today.getFullYear(), today.getMonth()+1,0);
-const date = (new Date(today.getFullYear(), today.getMonth(), 1)).getDay();
-let dateWeek = 0;
-switch (date) {
-    case 0:
-        dateWeek = 7;
-        break;
-    case 1:
-        dateWeek = 1;
-        break;
-    case 2:
-        dateWeek = 2;
-        break;
-    case 3:
-        dateWeek = 3;
-        break;
-    case 4:
-        dateWeek = 4;
-        break;
-    case 5:
-        dateWeek = 5;
-        break;
-    case 6:
-        dateWeek = 6;
-        break;
-    default:
-        console.log("Error")
-}  
-
-let counter = 1;
-
-for (let i = dateWeek; i < (dateWeek+lastDayActualMonth.getDate()); i++) {
-    div = document.getElementById(`cell${i}`);
-    div.innerHTML = counter;
-    counter++;
-}
-
-
-
+monthCalendar(2023, actualMonth)   
