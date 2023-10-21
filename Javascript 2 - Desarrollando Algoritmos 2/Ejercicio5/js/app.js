@@ -58,6 +58,34 @@ if (menu3 == 'y') {
 let matriuWords = word.split(" ");
 
 function stringManager(word, options) {
+    // Opcio 1
+    // console.log(word);
+    // if (options.replaceChars == true) {
+    //     const t0 = performance.now()
+    //     console.log(word.replaceAll("a", "@").replaceAll("e", "3").replaceAll("i", "1").replaceAll("o", "0").replaceAll("s", "$"));
+    //     const t1 = performance.now()
+    //     console.log(`Call to doSomething took ${t1 - t0} milliseconds.`); 
+    // } 
+    // if (options.capitalize == true) {
+    //     const t0 = performance.now()
+    //     let newMatriu = []
+    //     for (let i = 0; i < matriuWords.length; i++) {
+    //         let firstLetter = matriuWords[i].charAt(0).toUpperCase();   
+    //         let restWord = matriuWords[i].slice(1);
+    //         newMatriu[i] = firstLetter + restWord;
+    //     }
+    //     console.log(newMatriu.toString().replaceAll(","," "));
+    //     const t1 = performance.now()
+    //     console.log(`Call to doSomething took ${t1 - t0} milliseconds.`); 
+    // } 
+    // if (options.replaceSpaces == true) {
+    //     const t0 = performance.now()
+    //     console.log(word.replaceAll(" ", ","));
+    //     console.log(matriuWords.length,"words, ",word.length," chards.")
+    //     const t1 = performance.now()
+    //     console.log(`Call to doSomething took ${t1 - t0} milliseconds.`); 
+    // } 
+    // Opcio 2
     console.log(word);
     if (options.replaceChars == true) {
         console.time('Work done in');
