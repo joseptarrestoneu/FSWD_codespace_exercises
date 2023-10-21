@@ -10,404 +10,441 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Boostrap Demo 1</title>
 </head>
-<body class="small">
-    <div class="container">
-        <div class="row" id="calendar">
-            <div class="col text-center">
-                <div class="row bg-primary-subtle" >
-                    <div class="col" id="month-1"></div>
+<body>
+    <header>
+        <!-- <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark"> -->
+        <nav class="navbar bg-primary-subtle">
+        <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary"> -->
+            <div class="container-fluid">
+                <img src="./assets/img/logo_sant-tomas.png" alt="Logo" width="60" class="d-inline-block align-text-top">
+                <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Inici</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Usuaris</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Agenda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Professionals</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="row bg-primary-subtle weekTitle">
-                    <div class="col border">Mon</div>
-                    <div class="col border">Tue</div>
-                    <div class="col border">Wen</div>
-                    <div class="col border">Thurs</div>
-                    <div class="col border">Fri</div>
-                    <div class="col border">Sat</div>
-                    <div class="col border">Sun</div>
+            </div>
+        </nav>
+    </header>
+    <main class="small">
+        <div class="container-fluid">
+            <div class="row align-items-center" id="calendar">
+                <div class="col-1 text-end">
+                    <i class="fa-sharp fa-solid fa-chevron-left" id="leftArrow" onclick="actualitzarCalendarMenys(actualYear, actualMonth)"></i>
                 </div>
-                <div class="row row1">
-                    <a href="#" class="col border cell" id="cell1_month-0"></a>
-                    <a href="#" class="col border cell" id="cell2_month-0"></a>
-                    <a href="#" class="col border cell" id="cell3_month-0"></a>
-                    <a href="#" class="col border cell" id="cell4_month-0"></a>
-                    <a href="#" class="col border cell" id="cell5_month-0"></a>
-                    <a href="#" class="col border cell" id="cell6_month-0"></a>
-                    <a href="#" class="col border cell" id="cell7_month-0"></a>
-                </div>
-                <div class="row row2">
-                    <a href="#" class="col border cell" id="cell8_month-0"></a>
-                    <a href="#" class="col border cell" id="cell9_month-0"></a>
-                    <a href="#" class="col border cell" id="cell10_month-0"></a>
-                    <a href="#" class="col border cell" id="cell11_month-0"></a>
-                    <a href="#" class="col border cell" id="cell12_month-0"></a>
-                    <a href="#" class="col border cell" id="cell13_month-0"></a>
-                    <a href="#" class="col border cell" id="cell14_month-0"></a>
-                </div>
-                <div class="row row3">
-                    <a href="#" class="col border cell" id="cell15_month-0"></a>
-                    <a href="#" class="col border cell" id="cell16_month-0"></a>
-                    <a href="#" class="col border cell" id="cell17_month-0"></a>
-                    <a href="#" class="col border cell" id="cell18_month-0"></a>
-                    <a href="#" class="col border cell" id="cell19_month-0"></a>
-                    <a href="#" class="col border cell" id="cell20_month-0"></a>
-                    <a href="#" class="col border cell" id="cell21_month-0"></a>
-                </div>
-                <div class="row row4">
-                    <a href="#" class="col border cell" id="cell22_month-0"></a>
-                    <a href="#" class="col border cell" id="cell23_month-0"></a>
-                    <a href="#" class="col border cell" id="cell24_month-0"></a>
-                    <a href="#" class="col border cell" id="cell25_month-0"></a>
-                    <a href="#" class="col border cell" id="cell26_month-0"></a>
-                    <a href="#" class="col border cell" id="cell27_month-0"></a>
-                    <a href="#" class="col border cell" id="cell28_month-0"></a>
-                </div>
-                <div class="row row5">
-                    <a href="#" class="col border cell" id="cell29_month-0"></a>
-                    <a href="#" class="col border cell" id="cell30_month-0"></a>
-                    <a href="#" class="col border cell" id="cell31_month-0"></a>
-                    <a href="#" class="col border cell" id="cell32_month-0"></a>
-                    <a href="#" class="col border cell" id="cell33_month-0"></a>
-                    <a href="#" class="col border cell" id="cell34_month-0"></a>
-                    <a href="#" class="col border cell" id="cell35_month-0"></a>
-                </div>
-                <div class="row row6">
-                    <a href="#" class="col border cell" id="cell36_month-0"></a>
-                    <a href="#" class="col border cell" id="cell37_month-0"></a>
-                    <a href="#" class="col border cell" id="cell38_month-0"></a>
-                    <a href="#" class="col border cell" id="cell39_month-0"></a>
-                    <a href="#" class="col border cell" id="cell40_month-0"></a>
-                    <a href="#" class="col border cell" id="cell41_month-0"></a>
-                    <a href="#" class="col border cell" id="cell42_month-0"></a>
-                </div>
-            </div>    
-            <div class="col-1"></div>
-            <div class="col text-center">
-                <div class="row bg-primary-subtle">
-                    <div class="col" id="actualMonth"></div>
-                </div>
+                <div class="col text-center monthCalendar">
+                    <div class="row bg-primary-subtle" >
+                        <div class="col" id="month-1"></div>
+                    </div>
                     <div class="row bg-primary-subtle weekTitle">
-                    <div class="col border">Mon</div>
-                    <div class="col border">Tue</div>
-                    <div class="col border">Wen</div>
-                    <div class="col border">Thurs</div>
-                    <div class="col border">Fri</div>
-                    <div class="col border">Sat</div>
-                    <div class="col border">Sun</div>
+                        <div class="col border">Mon</div>
+                        <div class="col border">Tue</div>
+                        <div class="col border">Wen</div>
+                        <div class="col border">Thurs</div>
+                        <div class="col border">Fri</div>
+                        <div class="col border">Sat</div>
+                        <div class="col border">Sun</div>
+                    </div>
+                    <div class="row row1">
+                        <a href="#" class="col border cell" id="cell1_month-0"></a>
+                        <a href="#" class="col border cell" id="cell2_month-0"></a>
+                        <a href="#" class="col border cell" id="cell3_month-0"></a>
+                        <a href="#" class="col border cell" id="cell4_month-0"></a>
+                        <a href="#" class="col border cell" id="cell5_month-0"></a>
+                        <a href="#" class="col border cell" id="cell6_month-0"></a>
+                        <a href="#" class="col border cell" id="cell7_month-0"></a>
+                    </div>
+                    <div class="row row2">
+                        <a href="#" class="col border cell" id="cell8_month-0"></a>
+                        <a href="#" class="col border cell" id="cell9_month-0"></a>
+                        <a href="#" class="col border cell" id="cell10_month-0"></a>
+                        <a href="#" class="col border cell" id="cell11_month-0"></a>
+                        <a href="#" class="col border cell" id="cell12_month-0"></a>
+                        <a href="#" class="col border cell" id="cell13_month-0"></a>
+                        <a href="#" class="col border cell" id="cell14_month-0"></a>
+                    </div>
+                    <div class="row row3">
+                        <a href="#" class="col border cell" id="cell15_month-0"></a>
+                        <a href="#" class="col border cell" id="cell16_month-0"></a>
+                        <a href="#" class="col border cell" id="cell17_month-0"></a>
+                        <a href="#" class="col border cell" id="cell18_month-0"></a>
+                        <a href="#" class="col border cell" id="cell19_month-0"></a>
+                        <a href="#" class="col border cell" id="cell20_month-0"></a>
+                        <a href="#" class="col border cell" id="cell21_month-0"></a>
+                    </div>
+                    <div class="row row4">
+                        <a href="#" class="col border cell" id="cell22_month-0"></a>
+                        <a href="#" class="col border cell" id="cell23_month-0"></a>
+                        <a href="#" class="col border cell" id="cell24_month-0"></a>
+                        <a href="#" class="col border cell" id="cell25_month-0"></a>
+                        <a href="#" class="col border cell" id="cell26_month-0"></a>
+                        <a href="#" class="col border cell" id="cell27_month-0"></a>
+                        <a href="#" class="col border cell" id="cell28_month-0"></a>
+                    </div>
+                    <div class="row row5">
+                        <a href="#" class="col border cell" id="cell29_month-0"></a>
+                        <a href="#" class="col border cell" id="cell30_month-0"></a>
+                        <a href="#" class="col border cell" id="cell31_month-0"></a>
+                        <a href="#" class="col border cell" id="cell32_month-0"></a>
+                        <a href="#" class="col border cell" id="cell33_month-0"></a>
+                        <a href="#" class="col border cell" id="cell34_month-0"></a>
+                        <a href="#" class="col border cell" id="cell35_month-0"></a>
+                    </div>
+                    <div class="row row6">
+                        <a href="#" class="col border cell" id="cell36_month-0"></a>
+                        <a href="#" class="col border cell" id="cell37_month-0"></a>
+                        <a href="#" class="col border cell" id="cell38_month-0"></a>
+                        <a href="#" class="col border cell" id="cell39_month-0"></a>
+                        <a href="#" class="col border cell" id="cell40_month-0"></a>
+                        <a href="#" class="col border cell" id="cell41_month-0"></a>
+                        <a href="#" class="col border cell" id="cell42_month-0"></a>
+                    </div>
+                </div>    
+                <div class="col-1"></div>
+                <div class="col text-center monthCalendar">
+                    <div class="row bg-primary-subtle">
+                        <div class="col" id="actualMonth"></div>
+                    </div>
+                        <div class="row bg-primary-subtle weekTitle">
+                        <div class="col border">Mon</div>
+                        <div class="col border">Tue</div>
+                        <div class="col border">Wen</div>
+                        <div class="col border">Thurs</div>
+                        <div class="col border">Fri</div>
+                        <div class="col border">Sat</div>
+                        <div class="col border">Sun</div>
+                    </div>
+                    <div class="row row1">
+                        <a href="#" class="col border cell" id="cell1_month-1"></a>
+                        <a href="#" class="col border cell" id="cell2_month-1"></a>
+                        <a href="#" class="col border cell" id="cell3_month-1"></a>
+                        <a href="#" class="col border cell" id="cell4_month-1"></a>
+                        <a href="#" class="col border cell" id="cell5_month-1"></a>
+                        <a href="#" class="col border cell" id="cell6_month-1"></a>
+                        <a href="#" class="col border cell" id="cell7_month-1"></a>
+                    </div>
+                    <div class="row row2">
+                        <a href="#" class="col border cell" id="cell8_month-1"></a>
+                        <a href="#" class="col border cell" id="cell9_month-1"></a>
+                        <a href="#" class="col border cell" id="cell10_month-1"></a>
+                        <a href="#" class="col border cell" id="cell11_month-1"></a>
+                        <a href="#" class="col border cell" id="cell12_month-1"></a>
+                        <a href="#" class="col border cell" id="cell13_month-1"></a>
+                        <a href="#" class="col border cell" id="cell14_month-1"></a>
+                    </div>
+                    <div class="row row3">
+                        <a href="#" class="col border cell" id="cell15_month-1"></a>
+                        <a href="#" class="col border cell" id="cell16_month-1"></a>
+                        <a href="#" class="col border cell" id="cell17_month-1"></a>
+                        <a href="#" class="col border cell" id="cell18_month-1"></a>
+                        <a href="#" class="col border cell" id="cell19_month-1"></a>
+                        <a href="#" class="col border cell" id="cell20_month-1"></a>
+                        <a href="#" class="col border cell" id="cell21_month-1"></a>
+                    </div>
+                    <div class="row row4">
+                        <a href="#" class="col border cell" id="cell22_month-1"></a>
+                        <a href="#" class="col border cell" id="cell23_month-1"></a>
+                        <a href="#" class="col border cell" id="cell24_month-1"></a>
+                        <a href="#" class="col border cell" id="cell25_month-1"></a>
+                        <a href="#" class="col border cell" id="cell26_month-1"></a>
+                        <a href="#" class="col border cell" id="cell27_month-1"></a>
+                        <a href="#" class="col border cell" id="cell28_month-1"></a>
+                    </div>
+                    <div class="row row5">
+                        <a href="#" class="col border cell" id="cell29_month-1"></a>
+                        <a href="#" class="col border cell" id="cell30_month-1"></a>
+                        <a href="#" class="col border cell" id="cell31_month-1"></a>
+                        <a href="#" class="col border cell" id="cell32_month-1"></a>
+                        <a href="#" class="col border cell" id="cell33_month-1"></a>
+                        <a href="#" class="col border cell" id="cell34_month-1"></a>
+                        <a href="#" class="col border cell" id="cell35_month-1"></a>
+                    </div>
+                    <div class="row row6">
+                        <a href="#" class="col border cell" id="cell36_month-1"></a>
+                        <a href="#" class="col border cell" id="cell37_month-1"></a>
+                        <a href="#" class="col border cell" id="cell38_month-1"></a>
+                        <a href="#" class="col border cell" id="cell39_month-1"></a>
+                        <a href="#" class="col border cell" id="cell40_month-1"></a>
+                        <a href="#" class="col border cell" id="cell41_month-1"></a>
+                        <a href="#" class="col border cell" id="cell42_month-1"></a>
+                    </div>
                 </div>
-                <div class="row row1">
-                    <a href="#" class="col border cell" id="cell1_month-1"></a>
-                    <a href="#" class="col border cell" id="cell2_month-1"></a>
-                    <a href="#" class="col border cell" id="cell3_month-1"></a>
-                    <a href="#" class="col border cell" id="cell4_month-1"></a>
-                    <a href="#" class="col border cell" id="cell5_month-1"></a>
-                    <a href="#" class="col border cell" id="cell6_month-1"></a>
-                    <a href="#" class="col border cell" id="cell7_month-1"></a>
+                <div class="col-1"></div>
+                <div class="col text-center monthCalendar">
+                    <div class="row bg-primary-subtle">
+                        <div class="col" id="month+1"></div>
+                    </div>
+                        <div class="row bg-primary-subtle weekTitle">
+                        <div class="col border">Mon</div>
+                        <div class="col border">Tue</div>
+                        <div class="col border">Wen</div>
+                        <div class="col border">Thurs</div>
+                        <div class="col border">Fri</div>
+                        <div class="col border">Sat</div>
+                        <div class="col border">Sun</div>
+                    </div>
+                    <div class="row row1">
+                        <a href="#" class="col border cell" id="cell1_month-2"></a>
+                        <a href="#" class="col border cell" id="cell2_month-2"></a>
+                        <a href="#" class="col border cell" id="cell3_month-2"></a>
+                        <a href="#" class="col border cell" id="cell4_month-2"></a>
+                        <a href="#" class="col border cell" id="cell5_month-2"></a>
+                        <a href="#" class="col border cell" id="cell6_month-2"></a>
+                        <a href="#" class="col border cell" id="cell7_month-2"></a>
+                    </div>
+                    <div class="row row2">
+                        <a href="#" class="col border cell" id="cell8_month-2"></a>
+                        <a href="#" class="col border cell" id="cell9_month-2"></a>
+                        <a href="#" class="col border cell" id="cell10_month-2"></a>
+                        <a href="#" class="col border cell" id="cell11_month-2"></a>
+                        <a href="#" class="col border cell" id="cell12_month-2"></a>
+                        <a href="#" class="col border cell" id="cell13_month-2"></a>
+                        <a href="#" class="col border cell" id="cell14_month-2"></a>
+                    </div>
+                    <div class="row row3">
+                        <a href="#" class="col border cell" id="cell15_month-2"></a>
+                        <a href="#" class="col border cell" id="cell16_month-2"></a>
+                        <a href="#" class="col border cell " id="cell17_month-2"></a>
+                        <a href="#" class="col border cell" id="cell18_month-2"></a>
+                        <a href="#" class="col border cell" id="cell19_month-2"></a>
+                        <a href="#" class="col border cell" id="cell20_month-2"></a>
+                        <a href="#" class="col border cell" id="cell21_month-2"></a>
+                    </div>
+                    <div class="row row4">
+                        <a href="#" class="col border cell" id="cell22_month-2"></a>
+                        <a href="#" class="col border cell" id="cell23_month-2"></a>
+                        <a href="#" class="col border cell" id="cell24_month-2"></a>
+                        <a href="#" class="col border cell" id="cell25_month-2"></a>
+                        <a href="#" class="col border cell" id="cell26_month-2"></a>
+                        <a href="#" class="col border cell" id="cell27_month-2"></a>
+                        <a href="#" class="col border cell" id="cell28_month-2"></a>
+                    </div>
+                    <div class="row row5">
+                        <a href="#" class="col border cell" id="cell29_month-2"></a>
+                        <a href="#" class="col border cell" id="cell30_month-2"></a>
+                        <a href="#" class="col border cell" id="cell31_month-2"></a>
+                        <a href="#" class="col border cell" id="cell32_month-2"></a>
+                        <a href="#" class="col border cell" id="cell33_month-2"></a>
+                        <a href="#" class="col border cell" id="cell34_month-2"></a>
+                        <a href="#" class="col border cell" id="cell35_month-2"></a>
+                    </div>
+                    <div class="row row6">
+                        <a href="#" class="col border cell" id="cell36_month-2"></a>
+                        <a href="#" class="col border cell" id="cell37_month-2"></a>
+                        <a href="#" class="col border cell" id="cell38_month-2"></a>
+                        <a href="#" class="col border cell" id="cell39_month-2"></a>
+                        <a href="#" class="col border cell" id="cell40_month-2"></a>
+                        <a href="#" class="col border cell" id="cell41_month-2"></a>
+                        <a href="#" class="col border cell" id="cell42_month-2"></a>
+                    </div>
                 </div>
-                <div class="row row2">
-                    <a href="#" class="col border cell" id="cell8_month-1"></a>
-                    <a href="#" class="col border cell" id="cell9_month-1"></a>
-                    <a href="#" class="col border cell" id="cell10_month-1"></a>
-                    <a href="#" class="col border cell" id="cell11_month-1"></a>
-                    <a href="#" class="col border cell" id="cell12_month-1"></a>
-                    <a href="#" class="col border cell" id="cell13_month-1"></a>
-                    <a href="#" class="col border cell" id="cell14_month-1"></a>
-                </div>
-                <div class="row row3">
-                    <a href="#" class="col border cell" id="cell15_month-1"></a>
-                    <a href="#" class="col border cell" id="cell16_month-1"></a>
-                    <a href="#" class="col border cell" id="cell17_month-1"></a>
-                    <a href="#" class="col border cell" id="cell18_month-1"></a>
-                    <a href="#" class="col border cell" id="cell19_month-1"></a>
-                    <a href="#" class="col border cell" id="cell20_month-1"></a>
-                    <a href="#" class="col border cell" id="cell21_month-1"></a>
-                </div>
-                <div class="row row4">
-                    <a href="#" class="col border cell" id="cell22_month-1"></a>
-                    <a href="#" class="col border cell" id="cell23_month-1"></a>
-                    <a href="#" class="col border cell" id="cell24_month-1"></a>
-                    <a href="#" class="col border cell" id="cell25_month-1"></a>
-                    <a href="#" class="col border cell" id="cell26_month-1"></a>
-                    <a href="#" class="col border cell" id="cell27_month-1"></a>
-                    <a href="#" class="col border cell" id="cell28_month-1"></a>
-                </div>
-                <div class="row row5">
-                    <a href="#" class="col border cell" id="cell29_month-1"></a>
-                    <a href="#" class="col border cell" id="cell30_month-1"></a>
-                    <a href="#" class="col border cell" id="cell31_month-1"></a>
-                    <a href="#" class="col border cell" id="cell32_month-1"></a>
-                    <a href="#" class="col border cell" id="cell33_month-1"></a>
-                    <a href="#" class="col border cell" id="cell34_month-1"></a>
-                    <a href="#" class="col border cell" id="cell35_month-1"></a>
-                </div>
-                <div class="row row6">
-                    <a href="#" class="col border cell" id="cell36_month-1"></a>
-                    <a href="#" class="col border cell" id="cell37_month-1"></a>
-                    <a href="#" class="col border cell" id="cell38_month-1"></a>
-                    <a href="#" class="col border cell" id="cell39_month-1"></a>
-                    <a href="#" class="col border cell" id="cell40_month-1"></a>
-                    <a href="#" class="col border cell" id="cell41_month-1"></a>
-                    <a href="#" class="col border cell" id="cell42_month-1"></a>
+                <div class="col-1">
+                    <i class="fa-sharp fa-solid fa-chevron-right" id="rightArrow" onclick="actualitzarCalendarMes(actualYear, actualMonth)"></i>
                 </div>
             </div>
-            <div class="col-1"></div>
-            <div class="col text-center">
-                <div class="row bg-primary-subtle">
-                    <div class="col" id="month+1"></div>
-                </div>
-                    <div class="row bg-primary-subtle weekTitle">
-                    <div class="col border">Mon</div>
-                    <div class="col border">Tue</div>
-                    <div class="col border">Wen</div>
-                    <div class="col border">Thurs</div>
-                    <div class="col border">Fri</div>
-                    <div class="col border">Sat</div>
-                    <div class="col border">Sun</div>
-                </div>
-                <div class="row row1">
-                    <a href="#" class="col border cell" id="cell1_month-2"></a>
-                    <a href="#" class="col border cell" id="cell2_month-2"></a>
-                    <a href="#" class="col border cell" id="cell3_month-2"></a>
-                    <a href="#" class="col border cell" id="cell4_month-2"></a>
-                    <a href="#" class="col border cell" id="cell5_month-2"></a>
-                    <a href="#" class="col border cell" id="cell6_month-2"></a>
-                    <a href="#" class="col border cell" id="cell7_month-2"></a>
-                </div>
-                <div class="row row2">
-                    <a href="#" class="col border cell bg-danger-subtle" id="cell8_month-2"></a>
-                    <a href="#" class="col border cell" id="cell9_month-2"></a>
-                    <a href="#" class="col border cell" id="cell10_month-2"></a>
-                    <a href="#" class="col border cell bg-success-subtle" id="cell11_month-2"></a>
-                    <a href="#" class="col border cell" id="cell12_month-2"></a>
-                    <a href="#" class="col border cell" id="cell13_month-2"></a>
-                    <a href="#" class="col border cell" id="cell14_month-2"></a>
-                </div>
-                <div class="row row3">
-                    <a href="#" class="col border cell" id="cell15_month-2"></a>
-                    <a href="#" class="col border cell" id="cell16_month-2"></a>
-                    <a href="#" class="col border cell " id="cell17_month-2"></a>
-                    <a href="#" class="col border cell" id="cell18_month-2"></a>
-                    <a href="#" class="col border cell" id="cell19_month-2"></a>
-                    <a href="#" class="col border cell" id="cell20_month-2"></a>
-                    <a href="#" class="col border cell" id="cell21_month-2"></a>
-                </div>
-                <div class="row row4">
-                    <a href="#" class="col border cell" id="cell22_month-2"></a>
-                    <a href="#" class="col border cell" id="cell23_month-2"></a>
-                    <a href="#" class="col border cell" id="cell24_month-2"></a>
-                    <a href="#" class="col border cell" id="cell25_month-2"></a>
-                    <a href="#" class="col border cell" id="cell26_month-2"></a>
-                    <a href="#" class="col border cell" id="cell27_month-2"></a>
-                    <a href="#" class="col border cell" id="cell28_month-2"></a>
-                </div>
-                <div class="row row5">
-                    <a href="#" class="col border cell" id="cell29_month-2"></a>
-                    <a href="#" class="col border cell" id="cell30_month-2"></a>
-                    <a href="#" class="col border cell" id="cell31_month-2"></a>
-                    <a href="#" class="col border cell" id="cell32_month-2"></a>
-                    <a href="#" class="col border cell" id="cell33_month-2"></a>
-                    <a href="#" class="col border cell" id="cell34_month-2"></a>
-                    <a href="#" class="col border cell" id="cell35_month-2"></a>
-                </div>
-                <div class="row row6">
-                    <a href="#" class="col border cell" id="cell36_month-2"></a>
-                    <a href="#" class="col border cell" id="cell37_month-2"></a>
-                    <a href="#" class="col border cell" id="cell38_month-2"></a>
-                    <a href="#" class="col border cell" id="cell39_month-2"></a>
-                    <a href="#" class="col border cell" id="cell40_month-2"></a>
-                    <a href="#" class="col border cell" id="cell41_month-2"></a>
-                    <a href="#" class="col border cell" id="cell42_month-2"></a>
-                </div>
+        </div>
+        <div class="container-fluid cell"></div>
+        <div class="container" id="dayCalendar">
+            <div class="row text-center">
+                <div class="cell1 col border bg-primary-subtle" id="dayHeader"></div>
             </div>
-        </div>
-    </div>
-    <div class="container-fluid cell"></div>
-    <div class="container" id="dayCalendar">
-        <div class="row text-center">
-            <div class="cell1 col border bg-primary-subtle">dimecres</div>
-        </div>
-        <div class="row">
-            <div class="cell1 col-1 border">8:00</div>
-            <div class="cell1 col border"><div class="row"></div></div>
-        </div>
-        <div class="row">
-            <div class="cell1 col-1 border">8:30</div>
-            <div class="cell1 col border lineDay">
-                <div class="row">
-                    <div class="row col cite">
-                        <div class="col-9">
-                            <i class="fa-solid fa-circle-check"></i>
-                            <a href="">[3274849] Lerga Casas, Manuel - successiva</a>
-                        </div>
-                        <div class="col-3 text-end">
-                            <a href=""><i class="fa-regular fa-calendar-days"></i></a>
-                            <a href=""><i class="fa-solid fa-chart-simple"></i></a>
-                            <a href=""><i class="fa-solid fa-pen"></i></a>
-                            <a href=""><i class="fa-sharp fa-solid fa-xmark fa-lg"></i></a>
-                        </div>
-                    </div>
-                </div>
+            <div class="row">
+                <div class="cell1 col-1 border">8:00</div>
+                <div class="cell1 col border"><div class="row"></div></div>
             </div>
-        </div>
-        <div class="row">
-            <div class="cell1 col-1 border">9:00</div>
-            <div class="cell1 col border"><div class="row"></div></div>
-        </div>
-        <div class="row">
-            <div class="cell1 col-1 border">9:30</div>
-            <div class="cell1 col border"><div class="row"></div></div>
-        </div>
-        <div class="row">
-            <div class="cell1 col-1 border">10:00</div>
-            <div class="cell1 col border"><div class="row"></div></div>
-        </div>
-        <div class="row">
-            <div class="cell1 col-1 border">10:30</div>
-            <div class="cell1 col border lineDay">
-                <div class="row">
-                    <div class="row col cite">
-                        <div class="col-9">
-                            <i class="fa-regular fa-clock"></i>
-                            <a href="">[3274321] Lozano Parets, Eva - successiva</a>
-                        </div>
-                        <div class="col-3  text-end">
-                            <a href=""><i class="fa-regular fa-calendar-days"></i></a>
-                            <a href=""><i class="fa-solid fa-chart-simple"></i></a>
-                            <a href=""><i class="fa-solid fa-pen"></i></a>
-                            <a href=""><i class="fa-sharp fa-solid fa-xmark fa-lg"></i></a>
-                        </div>
-                    </div>
-                    <div class="row col cite">
-                        <div class="col-9">
-                            <i class="fa-regular fa-clock"></i>
-                            <a href="">[4673493] Capa Jordana, Toni - successiva</a>
-                        </div>    
-                        <div class="col-3  text-end">
-                            <a href=""><i class="fa-regular fa-calendar-days"></i></a>
-                            <a href=""><i class="fa-solid fa-chart-simple"></i></a>
-                            <a href=""><i class="fa-solid fa-pen"></i></a>
-                            <a href=""><i class="fa-sharp fa-solid fa-xmark fa-lg"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="cell1 col-1 border">11:00</div>
-            <div class="cell1 col border"><div class="row"></div></div>
-        </div>
-        <div class="row">
-            <div class="cell1 col-1 border">11:30</div>
-            <div class="cell1 col border"><div class="row"></div></div>
-        </div>
-        <div class="row">
-            <div class="cell1 col-1 border">12:00</div>
-            <div class="cell1 col border"><div class="row"></div></div>
-        </div>
-        <div class="row">
-            <div class="cell1 col-1 border">12:30</div>
-            <div class="cell1 col border"><div class="row"></div></div>
-        </div>
-        <div class="row">
-            <div class="cell1 col-1 border">13:00</div>
-            <div class="cell1 col border"><div class="row"></div></div>
-        </div>
-        <div class="row">
-            <div class="cell1 col-1 border">13:30</div>
-            <div class="cell1 col border"><div class="row"></div></div>
-        </div>
-        <div class="row">
-            <div class="cell1 col-1 border">14:00</div>
-            <div class="cell1 col border"><div class="row"></div></div>
-        </div>
-        <div class="row">
-            <div class="cell1 col-1 border">14:30</div>
-            <div class="cell1 col border"><div class="row"></div></div>
-        </div>
-        <div class="row">
-            <div class="cell1 col-1 border">15:00</div>
-            <div class="cell1 col border"><div class="row"></div></div>
-        </div>
-        <div class="row">
-            <div class="cell1 col-1 border">15:30</div>
-            <div class="cell1 col border"><div class="row"></div></div>
-        </div>
-        <div class="row">
-            <div class="cell1 col-1 border">16:00</div>
-            <div class="cell1 col border">
-                <div class="row">
-                    <div class="row col cite">
-                        <div class="col-9">
-                            <i class="fa-regular fa-clock"></i>
-                            <a href="">[3274321] Lozano Parets, Eva - successiva</a>
-                        </div>
-                        <div class="col-3  text-end">
-                            <a href=""><i class="fa-regular fa-calendar-days"></i></a>
-                            <a href=""><i class="fa-solid fa-chart-simple"></i></a>
-                            <a href=""><i class="fa-solid fa-pen"></i></a>
-                            <a href=""><i class="fa-sharp fa-solid fa-xmark fa-lg"></i></a>
-                        </div>
-                    </div>
-                    <div class="row col cite">
-                        <div class="col-9">
-                            <i class="fa-regular fa-clock"></i>
-                            <a href="">[4673493] Capa Jordana, Toni - successiva</a>
-                        </div>
-                        <div class="col-3 text-end">
-                            <a href=""><i class="fa-regular fa-calendar-days"></i></a>
-                            <a href=""><i class="fa-solid fa-chart-simple"></i></a>
-                            <a href=""><i class="fa-solid fa-pen"></i></a>
-                            <a href=""><i class="fa-sharp fa-solid fa-xmark fa-lg"></i></a>
-                        </div>
-                    </div>
-                    <div class="row col cite">
-                        <div class="col-9">
-                            <i class="fa-regular fa-clock"></i>
-                            <a href="">[4673493] Capa Jordana, Toni - successiva</a>
-                        </div>
-                        <div class="col-3  text-end">
-                            <a href=""><i class="fa-regular fa-calendar-days"></i></a>
-                            <a href=""><i class="fa-solid fa-chart-simple"></i></a>
-                            <a href=""><i class="fa-solid fa-pen"></i></a>
-                            <a href=""><i class="fa-sharp fa-solid fa-xmark fa-lg"></i></a>
+            <div class="row">
+                <div class="cell1 col-1 border">8:30</div>
+                <div class="cell1 col border lineDay">
+                    <div class="row">
+                        <div class="row col cite">
+                            <div class="col-9">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <a href="">[3274849] Lerga Casas, Manuel - successiva</a>
+                            </div>
+                            <div class="col-3 text-end">
+                                <a href=""><i class="fa-regular fa-calendar-days"></i></a>
+                                <a href=""><i class="fa-solid fa-chart-simple"></i></a>
+                                <a href=""><i class="fa-solid fa-pen"></i></a>
+                                <a href=""><i class="fa-sharp fa-solid fa-xmark fa-lg"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="cell1 col-1 border">16:30</div>
-            <div class="cell1 col border"><div class="row"></div></div>
-        </div>
-        <div class="row">
-            <div class="cell1 col-1 border">17:00</div>
-            <div class="cell1 col border"><div class="row"></div></div>
-        </div>
-        <div class="row">
-            <div class="cell1 col-1 border">17:30</div>
-            <div class="cell1 col border"><div class="row"></div></div>
-        </div>
-        <div class="row">
-            <div class="cell1 col-1 border">18:00</div>
-            <div class="cell1 col border"><div class="row"></div></div>
-        </div>
-        <div class="row">
-            <div class="cell1 col-1 border">18:30</div>
-            <div class="cell1 col border"><div class="row"></div></div>
-        </div>
-        <div class="row">
-            <div class="cell1 col-1 border">19:00</div>
-            <div class="cell1 col border"><div class="row"></div></div>
-        </div>
-        <div class="row">
-            <div class="cell1 col-1 border">19:30</div>
-            <div class="cell1 col border"><div class="row"></div></div>
-        </div>
-    </div>
+            <div class="row">
+                <div class="cell1 col-1 border">9:00</div>
+                <div class="cell1 col border"><div class="row"></div></div>
+            </div>
+            <div class="row">
+                <div class="cell1 col-1 border">9:30</div>
+                <div class="cell1 col border"><div class="row"></div></div>
+            </div>
+            <div class="row">
+                <div class="cell1 col-1 border">10:00</div>
+                <div class="cell1 col border"><div class="row"></div></div>
+            </div>
+            <div class="row">
+                <div class="cell1 col-1 border">10:30</div>
+                <div class="cell1 col border lineDay">
+                    <div class="row">
+                        <div class="row col cite">
+                            <div class="col-9">
+                                <i class="fa-regular fa-clock"></i>
+                                <a href="">[3274321] Lozano Parets, Eva - successiva</a>
+                            </div>
+                            <div class="col-3  text-end">
+                                <a href=""><i class="fa-regular fa-calendar-days"></i></a>
+                                <a href=""><i class="fa-solid fa-chart-simple"></i></a>
+                                <a href=""><i class="fa-solid fa-pen"></i></a>
+                                <a href=""><i class="fa-sharp fa-solid fa-xmark fa-lg"></i></a>
+                            </div>
+                        </div>
+                        <div class="row col cite">
+                            <div class="col-9">
+                                <i class="fa-regular fa-clock"></i>
+                                <a href="">[4673493] Capa Jordana, Toni - successiva</a>
+                            </div>    
+                            <div class="col-3  text-end">
+                                <a href=""><i class="fa-regular fa-calendar-days"></i></a>
+                                <a href=""><i class="fa-solid fa-chart-simple"></i></a>
+                                <a href=""><i class="fa-solid fa-pen"></i></a>
+                                <a href=""><i class="fa-sharp fa-solid fa-xmark fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell1 col-1 border">11:00</div>
+                <div class="cell1 col border"><div class="row"></div></div>
+            </div>
+            <div class="row">
+                <div class="cell1 col-1 border">11:30</div>
+                <div class="cell1 col border"><div class="row thisCite" id="thisCite"></div></div>
+            </div>
+            <div class="row">
+                <div class="cell1 col-1 border">12:00</div>
+                <div class="cell1 col border"><div class="row"></div></div>
+            </div>
+            <div class="row">
+                <div class="cell1 col-1 border">12:30</div>
+                <div class="cell1 col border"><div class="row"></div></div>
+            </div>
+            <div class="row">
+                <div class="cell1 col-1 border">13:00</div>
+                <div class="cell1 col border"><div class="row"></div></div>
+            </div>
+            <div class="row">
+                <div class="cell1 col-1 border">13:30</div>
+                <div class="cell1 col border"><div class="row"></div></div>
+            </div>
+            <div class="row">
+                <div class="cell1 col-1 border">14:00</div>
+                <div class="cell1 col border"><div class="row"></div></div>
+            </div>
+            <div class="row">
+                <div class="cell1 col-1 border">14:30</div>
+                <div class="cell1 col border"><div class="row"></div></div>
+            </div>
+            <div class="row">
+                <div class="cell1 col-1 border">15:00</div>
+                <div class="cell1 col border"><div class="row"></div></div>
+            </div>
+            <div class="row">
+                <div class="cell1 col-1 border">15:30</div>
+                <div class="cell1 col border"><div class="row"></div></div>
+            </div>
+            <div class="row">
+                <div class="cell1 col-1 border">16:00</div>
+                <div class="cell1 col border">
+                    <div class="row">
+                        <div class="row col cite">
+                            <div class="col-9">
+                                <i class="fa-regular fa-clock"></i>
+                                <a href="">[3274321] Lozano Parets, Eva - successiva</a>
+                            </div>
+                            <div class="col-3  text-end">
+                                <a href=""><i class="fa-regular fa-calendar-days"></i></a>
+                                <a href=""><i class="fa-solid fa-chart-simple"></i></a>
+                                <a href=""><i class="fa-solid fa-pen"></i></a>
+                                <a href=""><i class="fa-sharp fa-solid fa-xmark fa-lg"></i></a>
+                            </div>
+                        </div>
+                        <div class="row col cite">
+                            <div class="col-9">
+                                <i class="fa-regular fa-clock"></i>
+                                <a href="">[4673493] Capa Jordana, Toni - successiva</a>
+                            </div>
+                            <div class="col-3 text-end">
+                                <a href=""><i class="fa-regular fa-calendar-days"></i></a>
+                                <a href=""><i class="fa-solid fa-chart-simple"></i></a>
+                                <a href=""><i class="fa-solid fa-pen"></i></a>
+                                <a href=""><i class="fa-sharp fa-solid fa-xmark fa-lg"></i></a>
+                            </div>
+                        </div>
+                        <div class="row col cite">
+                            <div class="col-9">
+                                <i class="fa-regular fa-clock"></i>
+                                <a href="">[4673493] Capa Jordana, Toni - successiva</a>
+                            </div>
+                            <div class="col-3  text-end">
+                                <a href=""><i class="fa-regular fa-calendar-days"></i></a>
+                                <a href=""><i class="fa-solid fa-chart-simple"></i></a>
+                                <a href=""><i class="fa-solid fa-pen"></i></a>
+                                <a href=""><i class="fa-sharp fa-solid fa-xmark fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell1 col-1 border">16:30</div>
+                <div class="cell1 col border"><div class="row"></div></div>
+            </div>
+            <div class="row">
+                <div class="cell1 col-1 border">17:00</div>
+                <div class="cell1 col border"><div class="row"></div></div>
+            </div>
+            <div class="row">
+                <div class="cell1 col-1 border">17:30</div>
+                <div class="cell1 col border"><div class="row"></div></div>
+            </div>
+            <div class="row">
+                <div class="cell1 col-1 border">18:00</div>
+                <div class="cell1 col border"><div class="row"></div></div>
+            </div>
+            <div class="row">
+                <div class="cell1 col-1 border">18:30</div>
+                <div class="cell1 col border"><div class="row"></div></div>
+            </div>
+            <div class="row">
+                <div class="cell1 col-1 border">19:00</div>
+                <div class="cell1 col border"><div class="row"></div></div>
+            </div>
+            <div class="row">
+                <div class="cell1 col-1 border">19:30</div>
+                <div class="cell1 col border"><div class="row"></div></div>
+            </div>
+        </div>    
+    </main>
 </body>
 <!-- Scripts -->
 <script src="https://kit.fontawesome.com/c5c0dd7a56.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-<script src="js/app.js"></script>
+<script src="./assets/js/app.js"></script>
 </html>

@@ -1,13 +1,11 @@
 @import './variables';
 @import './maps';
 
-body {
-    padding-top: 10%;
+main {
+    padding-top: 20px;
 }
 
 #calendar {
-    margin-left: 5rem;
-    margin-right: 5rem;
     font-size: map-get($font-sizes, initial);
 }
 
@@ -21,6 +19,10 @@ body {
 
 .cell1 {
     height: 25px;    
+}
+
+.weekTitle {
+    flex-wrap: nowrap;
 }
 
 .cite {
@@ -44,11 +46,11 @@ a {
     color: $dark;
 }
 
-#calendar a:hover {
+.monthCalendar a:hover {
     background-color: #e7e7e7;
 }
 
-.fa-sharp {
+.fa-xmark {
     color: $red;
     font-weight: bolder;
 }
@@ -59,4 +61,17 @@ a {
 
 .fa-clock {
     color: $blue;
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+    font-size: map-get($font-sizes, large);
+    color: $standard;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.fa-chevron-left:hover,
+.fa-chevron-right:hover {
+    transform: scale(1.25);
 }
