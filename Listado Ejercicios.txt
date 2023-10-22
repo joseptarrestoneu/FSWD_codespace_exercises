@@ -31,3 +31,7 @@ Ejercicio6 => [x]
 Ejercicio7 => [x]
 Ejercicio8 => [ ] Pendiente
 Ejercicio9 => [ ] En curso...
+
+Ejercicios Javascript - DOM
+-------------------------------------
+Ejercicio1 => [x] Tema Claro i Oscuro
