@@ -1,5 +1,14 @@
 <h3> ⚙️ Ejercicios FSWD </h3>
 
+<h5>HTML5 i CSS3 - Intermediate</h5>
+  - [ ] Ejercicio 1
+  - [ ] Ejercicio 2
+  - [ ] Ejercicio 3
+  - [ ] Ejercicio 4
+  - [ ] Ejercicio 5
+  - [ ] Ejercicio 6
+  - [ ] Ejercicio 7
+
 <h5>Javascript - Desarrollando algoritmos 1</h5>
   - [ ] Ejercicio 1
   - [ ] Ejercicio 2
