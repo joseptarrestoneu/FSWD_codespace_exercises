@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "RobotoRegular";
+  transition: all 0.3s ease-in-out;
+  color: #000;
+}
+
+:root {
+  --clases: pink;
+  --blue: #0d6efd;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #d63384;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #198754;
+  --teal: #20c997;
+  --cyan: #0dcaf0;
+  --gray-500: #adb5bd;
+  --black: #000;
+  --burlywood: #deb887;
+}
+div {
+  max-width: 600px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+.titulo {
+  padding: 5px;
+  background-color: var(--burlywood);
+  border-top: 1px solid var(--black);
+  border-left: 1px solid var(--black);
+  border-right: 1px solid var(--black);
+  margin: 5rem auto 0;
+}
+.vacio {
+  background-color: var(--orange);
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th,
+.horas {
+  background-color: var(--green);
+  padding: 20px;
+  text-align: center;
+  border: 1px solid var(--black);
+  font-weight: bold;
+}
+td {
+  background-color: var(--clases);
+  padding: 20px;
+  text-align: center;
+  border: 1px solid var(--black);
+}
+.math {
+  background-color: var(--cyan);
+}
+.sci {
+  background-color: var(--red);
+}
+.eng {
+  background-color: var(--yellow);
+}
+.sst {
+  background-color: var(--teal);
+}
+.mar {
+  background-color: var(--indigo);
+}
+.hin {
+  background-color: var(--pink);
+}
+.comp {
+  background-color: var(--blue);
+}

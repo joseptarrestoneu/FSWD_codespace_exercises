@@ -1,0 +1,61 @@
+@font-face {
+	font-family: 'RobotoRegular';
+	src: url('../fonts/roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 0.785rem;
+  transition: all 0.3s ease-in-out;
+  border: 0;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+:root {
+  font-size: 0.785rem;
+  font-family: "RobotoRegular";
+  --blue: #0d6efd;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #d63384;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #198754;
+  --teal: #20c997;
+  --cyan: #0dcaf0;
+  --dark: #1f2125;
+  --white: #fff;
+  --grey_light: #CCCCCC;
+}
+
+body{
+  background-color: var(--white);
+}
+
+section{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: column dense;
+  gap: 15px;
+  padding: 2em;
+}
+
+figure {
+  width: 100%;
+  /* height: 100%; */
+  margin: 1em 0;
+}
+
+img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}

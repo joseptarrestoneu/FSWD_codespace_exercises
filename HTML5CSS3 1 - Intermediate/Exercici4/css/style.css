@@ -1,0 +1,94 @@
+:root{
+    font-size: .785;
+    font-family: 'Inconsolata', monospace;
+    --black: #000;
+    --blue: #0d6ef2;
+    --cyan: #0dcaf0;
+    --green: #198754;
+    --indigo: #6610f2;
+    --orange: #fd7e14;
+    --puerple: #6f42c1;
+    --pink: #d63384;
+    --red: #dc3545;
+    --teal: #20c997;
+    --yellow: #ffc107;
+    box-sizing: border-box;
+}
+
+*, ::before, ::after {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    width: 100%;
+}
+
+.group {
+    background-color: #fafafa;
+    width: 80%;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 250px;
+    height: 150px;
+    margin: 1rem .5rem 1rem;
+    border-radius: 5px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 1em;
+}
+
+.card a {
+    color: #fff;
+}
+
+.card a:hover {
+    transform: scale(1.2);
+}
+
+.cardMain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.cardMain span {
+    font-size: 2.5rem;
+}
+
+.cardStars {
+    display: flex;
+    justify-content: space-between;
+    font-size: .9rem;
+}
+
+.cardStars span:not(:first-of-type) {
+    font-weight: bold;
+}
+
+.blue {
+    background-color: #5AA7FF;
+}
+
+.green {
+    background-color: #43DCBE;
+}
+
+.orange {
+    background-color: #FFBF64;
+}
+
+.red {
+    background-color: #FF6982;
+}

@@ -1,0 +1,84 @@
+* {
+  
+  color: brown;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 0.785rem;
+  transition: all 0.3s ease-in-out;
+  font: italic 30px "Calibri";
+}
+
+body{
+  background: url("../img/bg_calendar.jpg") no-repeat fixed center center;
+}
+
+i{
+  font-size: 5rem;
+  cursor: pointer;
+}
+
+i:hover{
+  transform: rotate(180deg);
+}
+p{
+  text-align: center;
+  padding: 2rem 0; 
+  position: sticky;
+  background-color: #fff;
+  margin: 100px 0;
+}
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+div {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  border: 1px solid brown;
+
+  
+}
+
+div > div {
+  width: 25%;
+  padding: 2rem 2%;
+  border: 1px solid brown;
+  background-color: #fff;
+}
+
+div > div > div {
+  width: 100%;
+  color: black;
+  font-size: calc(14px + (30 - 14) * ((100vw - 300px) / (1920 - 300)));
+  border: 0;
+}
+div > div > div:first-of-type {
+  padding: 0 0 1em;
+  background: url("../img/bg_calendar.jpg") center center no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 20vh;
+  transition: all 0.3s ease-in-out;
+}
+div > div > div:last-of-type {
+  text-align: center;
+  display: block;
+  padding: 1em 0 0;
+}
+
+div > div > div:first-of-type:hover{
+  transform: scale(1.2);
+}
+
+.encabezado{position: sticky; width: 100%; top: 0; left: 0; background-color: #ff0000; color: #fff; margin: 100px 0px; z-index: 5;}
+
+@media (max-width:500px){
+  div > div { width: 50%;}
+}
