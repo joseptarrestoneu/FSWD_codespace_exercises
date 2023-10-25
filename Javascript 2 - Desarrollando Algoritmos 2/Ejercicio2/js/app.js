@@ -4,7 +4,7 @@
 const ejercicio2 = () => {
     let palabra = prompt("Introduce una palabra","");
     // Opcio 1:
-    console.log(palabra.split("").reverse().reduce((acc, curreValue) => {return acc + curreValue}));
+    console.log(palabra.split("").reverse());
     // Opcio 2:
     console.log([...palabra].reverse().join(""));
 };

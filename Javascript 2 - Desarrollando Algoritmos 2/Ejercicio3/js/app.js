@@ -5,6 +5,7 @@
 // ****
 // ****
 
+// Opción 1
 const ejercicio3 = () => {
     let result = "";
     let rows = prompt("Introduce el número de filas", 1);
@@ -19,3 +20,17 @@ const ejercicio3 = () => {
 };
 
 ejercicio3();
+
+// Opción 2
+// const ejercicio3 = () => {
+//     let array = "";
+//     let rows = prompt("Introduce el número de filas", 1);
+//     let columns = prompt("Introduce el número de columnas", 1);
+//     for (let index = 0; index < 4; index++) {
+//        array +="****\n";
+//     }
+//     console.log(array)
+// };
+
+// ejercicio3();
+
