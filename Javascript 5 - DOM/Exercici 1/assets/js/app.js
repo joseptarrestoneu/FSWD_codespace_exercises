@@ -1,14 +1,17 @@
-{/* <i class="fa-solid fa-sun"></i> */}
 
 function changeLight() {
 
     let select = document.querySelector("div");
     let sun = document.querySelector("i");
-    console.log(sun.getAttribute("class") === "fa-solid fa-moon");
+    let text = document.querySelector("span");
     
-    sun.getAttribute("class") !== "fa-solid fa-moon" ?
-        sun.setAttribute("class","fa-solid fa-moon") :
-        sun.setAttribute("class","fa-solid fa-sun")
+    if (sun.getAttribute("class") !== "fa-solid fa-moon") {
+        sun.setAttribute("class","fa-solid fa-moon");
+        text.textContent = "Good Night!";
+    } else {
+        sun.setAttribute("class","fa-solid fa-sun");
+        text.textContent = "Good Morning!";
+    }
     select.classList.toggle("dark")
 }
 

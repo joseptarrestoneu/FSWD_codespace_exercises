@@ -68,17 +68,18 @@ div {
   font-family: "Titillium Web", sans-serif;
   font-size: 3rem;
   background-color: var(--day);
+  transition: all 1s ease-in-out;
 }
 
 div p {
   transition: all 1s ease-in-out;
 }
 
-i{
+i {
   margin-left: 1rem;
 }
 
-@-webkit-keyframes animar{
+@keyframes animar{
   0%{-webkit-transform: translate(0px, 0px);}
   10%{-webkit-transform: translate(10px, 0px);}
   20%{-webkit-transform: translate(0px, 0px);}
@@ -93,11 +94,7 @@ i{
 }
 
 i:hover {
-  -webkit-animation: animar 0.5s 1;
-}
-
-i:hover {
-  
+  animation: animar 0.5s 1;
 }
 
 .dark {
