@@ -7,10 +7,10 @@ function changeLight() {
     
     if (sun.getAttribute("class") !== "fa-solid fa-moon") {
         sun.setAttribute("class","fa-solid fa-moon");
-        text.textContent = "Good Night!";
+        text.textContent = "Good Morging!";
     } else {
         sun.setAttribute("class","fa-solid fa-sun");
-        text.textContent = "Good Morning!";
+        text.textContent = "Good Night!";
     }
     select.classList.toggle("dark")
 }
