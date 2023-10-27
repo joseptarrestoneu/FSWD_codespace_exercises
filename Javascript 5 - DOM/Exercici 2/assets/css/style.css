@@ -1,0 +1,134 @@
+:root {
+  font-size: 0.785;
+  --black: #000;
+  --blue: #0d6ef2;
+  --cyan: #0dcaf0;
+  --green: #198754;
+  --indigo: #6610f2;
+  --orange: #fd7e14;
+  --puerple: #6f42c1;
+  --pink: #d63384;
+  --red: #dc3545;
+  --teal: #20c997;
+  --yellow: #ffc107;
+  --white: #fff;
+  --day: #FFBF00;
+  --night: #298662;
+  box-sizing: border-box;
+  outline: 0 none; /* És un tipus de border per sobre dels borders */
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Titillium Web", sans-serif;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+h2 {
+  font-size: 2.25rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.1rem;
+}
+h5 {
+  font-size: 0.9rem;
+}
+h6 {
+  font-size: 0.7rem;
+}
+
+div {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 3rem;
+  background-color: var(--day);
+  transition: all 1s ease-in-out;
+}
+
+div p {
+  transition: all 1s ease-in-out;
+}
+
+i {
+  margin-left: 1rem;
+}
+
+@keyframes animar {
+  10% {transform: translateX(3px) rotate(2deg);}
+  20% {transform: translateX(-3px) rotate(-2deg);}
+  30% {transform: translateX(3px) rotate(2deg);}
+  40% {transform: translateX(-3px) rotate(-2deg);}
+  50% {transform: translateX(2px) rotate(1deg);}
+  60% {transform: translateX(-2px) rotate(-1deg);}
+  70% {transform: translateX(2px) rotate(1deg);}
+  80% {transform: translateX(-2px) rotate(-1deg);}
+  90% {transform: translateX(1px) rotate(0);}
+  100% {transform: translateX(-1px) rotate(0);}
+}
+
+i:hover {
+  animation: animar 0.5s 1;
+}
+
+.dark {
+  background-color: var(--night);
+  transition: all 1s ease-in-out;
+}
+
+.dark p {
+  color: #fff;
+  transform: rotate(180deg);
+  transition: all 1s ease-in-out;
+}
+
+/* Bostrap breackpoints */
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+  /* here your code */  
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  /* here your code */  
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* here your code */  
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* here your code */  
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  /* here your code */  
+}
