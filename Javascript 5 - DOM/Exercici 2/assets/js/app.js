@@ -18,3 +18,12 @@ function changeLight() {
     }
     select.classList.toggle("dark")
 }
+
+
+let icon = document.querySelector("i")
+icon.addEventListener("click", (event)=> {
+    console.log(event.target)
+    console.log(event)
+    console.log(event.type)
+    console.log(event)
+})
