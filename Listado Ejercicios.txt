@@ -35,3 +35,5 @@ Ejercicio9 => [ ] En curso...
 Ejercicios Javascript - DOM
 -------------------------------------
 Ejercicio1 => [x] Tema Claro i Oscuro
+Ejercicio2 => [x] Tema Claro i Oscuro (variante)
+Ejercicio3 => [x] Lista de tareas
