@@ -1,14 +1,15 @@
 window.addEventListener("load", () => {
     let id = 0;
-    let text = "";
     let alert = document.querySelector(".alert");
     let close = alert.firstElementChild;
     let input = document.querySelector("#task"); 
     let arrow = document.querySelector(".arrow");
     let container = document.querySelector(".container");
-    let pencil = document.querySelector(".fa-pencil");
-    let trash = document.querySelector(".fa-trash");
-    
+    let done = document.querySelectorAll(".fa-circle-check")
+    let trash = document.querySelectorAll(".fa-trash");
+    let pencil = document.querySelectorAll(".fa-pencil");
+    let task = document.querySelectorAll(".task");
+
     close.addEventListener("click", ()=> {
         alert.classList.add("dismissible")
     })
@@ -32,13 +33,38 @@ window.addEventListener("load", () => {
             container.querySelector("tbody")?.insertAdjacentHTML("beforeend", generateRow(id, input.value));
             input.value = "";
         }
+        done = document.querySelectorAll(".fa-circle-check");  
+        console.log(done);
+         
     });  
+         
+    // Marcar las tareas como realizadas. Hay que recorrer todos los items
+    done.forEach(item => {
+        item.addEventListener("click", (event) => {
+            deleteTask(event)
+        });        
+    })
 
-    trash.addEventListener("click", (event) => {
-        event.target.
-        console.log(event);
-        
-    });
+    // Borrar las tareas como realizadas. Hay que recorrer todos los items
+    trash.forEach(item => {
+        item.addEventListener("click", (event) => {
+            removeTask(event)
+        });        
+    })
+
+    // Editar las tareas como realizadas. Hay que recorrer todos los items
+    pencil.forEach(item => {
+        item.addEventListener("click", (event) => {
+            editTask(event, false)
+        });        
+    })
+
+    // Editar las tareas como realizadas pero desde la misma tarea. Hay que recorrer todos los items
+    task.forEach(item => {
+        item.addEventListener("focus", (event) => {
+            editTask(event, true)
+        });        
+    })
 
 });
 
@@ -48,7 +74,7 @@ const generateRow = (id, text) => {
     `<tr id=${id}>
         <td>
             <i class='fa-solid fa-circle-check fa-2x'></i>
-            <span class='task' contenteditable='true'>${text}</span>
+            <span class='task' contenteditable='true' data-completed="false">${text}</span>
         </td>
         <td>
             <span class='fa-stack fa-2x'>
@@ -66,4 +92,36 @@ const generateRow = (id, text) => {
     return newRow
 }
 
+// Funcion para marcar las tareas como realizadas
+const deleteTask = (event) => {
+    let task = event.target.nextElementSibling
+    let text = task.textContent;
+    if (task.querySelector("del")) {
+        event.target.nextElementSibling.innerHTML = `${text}`;
+        // Añadimos data-completed para dar información al programador
+        task.setAttribute("data-completed", "false");
+    } else {
+        event.target.nextElementSibling.innerHTML = `<del>${text}</del>`;
+        // Añadimos data-completed para dar información al programador
+        task.setAttribute("data-completed", "true");
+    }
+}
 
+// Funcion para borrar las tareas como realizadas
+const removeTask = (event) => {
+    // Opcion que el evento borre toda la fila. 
+    event.target.parentNode.parentNode.parentNode.remove();
+    // Opcion que el evento no borre toda la fila y le ponga una clase para hacer displya: none con css
+    // event.target.parentNode.parentNode.parentNode.classList.add("deleted");
+}
+
+// Funcion para editar las tareas como realizadas
+const editTask = (event, onfocus) => {
+    let editableTask = event.target.parentNode.parentNode.parentNode.querySelector(".task")
+    if (onfocus) {
+        editableTask.classList.add("editable");
+    } else {
+        editableTask.classList.add("editable");
+        editableTask.focus();
+    }
+}
