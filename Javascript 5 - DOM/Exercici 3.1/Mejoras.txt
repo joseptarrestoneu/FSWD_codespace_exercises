@@ -1,0 +1,34 @@
+Mejoras en la Lista de Tareas:
+
+Obligatorias:
+[x] Al borrar todos los caracteres de la tarea pero dejando 1 o mas espacios en blanco al apretar la tecla Escape no se borra la tarea.
+[x] A la derecha del recuadro blanco añadir botones con los siguientes estilos:
+        - https://mdbootstrap.com/docs/standard/components/button-group/
+    Tienen que contener:
+        - All
+        - ToDo
+        - Done
+    La función es de filtro de las tareas.
+
+Optativas:
+[x] Al enviar una tarea hacer aparecer un alert verde con el contenido: "Tarea añadida satisfactoriamente" i que desaparezca a los 5 segundos.
+[ ] Crear atajos de teclado:
+        - Tabulador: vaciar contenido del input (nueva tarea)
+        - Control + Insert: el foco aparece en el input para introducir una nueva tarea.
+        - Control + Shift + S: añadir tarea a la lista. Si no hay contenido aparece la alerta roja.
+        - Control + Shift + F1: elimina la primera tarea de la tabla.
+        - Control + Shift + F2: elimina la última tarea de la tabla.
+        - Control + Shift + F5: activa el modo de edicion de la primera tarea de la tabla.
+        - Control + Shift + F6: activa el modo de edicion de la última tarea de la tabla.
+        - Control + Supr: vacia toda la tabla de tareas.
+Bonus: 
+[ ] Añadir un dataPicker:
+        - Uno para la fecha de inicio de la tarea.
+        - Uno para la fecha final de la tarea.
+    Al añadir la tarea guardar la fecha de inicio i final de la tarea.
+[ ] Añadir icono "gear" a position absolut top=20px i a right=0px i z-index=3. Al hacer click canviar a modo oscuro:
+        - Colores del título (Task List)
+        - Colores de los botones el filtro
+        - Colores del formulario
+        - Colores de la cabecera de la tabla
+[ ] Añadir filtro de fechas de la tabla de tareas
