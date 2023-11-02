@@ -4,6 +4,8 @@ window.addEventListener("load", () => {
     let message = document.querySelector(".message");
     let close = alert.firstElementChild;
     let input = document.querySelector("#task"); 
+    let input1 = document.querySelector("#dateStart"); 
+    let input2 = document.querySelector("#dateEnd"); 
     let arrow = document.querySelector(".arrow");
     let container = document.querySelector(".list-task");
     let done = document.querySelectorAll(".fa-circle-check")
@@ -13,7 +15,32 @@ window.addEventListener("load", () => {
     let buttonAll = document.querySelector(".all");
     let buttonToDo = document.querySelector(".todo");
     let buttonDone = document.querySelector(".done");
-  
+
+    window.addEventListener("keydown", (event) => {
+        if (event.ctrlKey && event.code == "F8" ) {
+            input.focus()
+        };
+        if (document.querySelectorAll(".task-file").length !== 0) {
+            if (event.ctrlKey && event.shiftKey && event.code == "F1" ) {
+                document.querySelectorAll(".task-file")[0].remove();
+            };
+            if (event.ctrlKey && event.shiftKey && event.code == "F2" ) {
+                document.querySelectorAll(".task-file")[document.querySelectorAll(".task-file").length-1].remove();
+            };
+            if (event.ctrlKey && event.shiftKey && event.code == "F5" ) {
+                document.querySelectorAll(".task-file")[0].firstElementChild.lastElementChild.focus();
+            };
+            if (event.ctrlKey && event.shiftKey && event.code == "F6" ) {
+                document.querySelectorAll(".task-file")[document.querySelectorAll(".task-file").length-1].firstElementChild.lastElementChild.focus();
+            };
+            if (event.ctrlKey && event.code == "Delete" ) {
+                document.querySelectorAll(".task-file").forEach(item => {
+                    item.remove();           
+                });
+            };
+        }
+    })
+
     close.addEventListener("click", ()=> {
         alert.classList.add("dismissible")
     })
@@ -23,6 +50,13 @@ window.addEventListener("load", () => {
             if (event.code === "Enter" || event.code === "NumpadEnter") {
                 event.preventDefault();
             };
+            if (event.code === "Tab" && event.target.value.length !== 0) {
+                event.target.value = "";
+                event.preventDefault();
+            };
+            if (event.ctrlKey && event.shiftKey && event.code == "KeyS") {
+                addTask(id, container, message, input);
+            };
         });
     });
 
@@ -31,33 +65,11 @@ window.addEventListener("load", () => {
         if (input.value.trim() === "") {
             event.preventDefault();
             input.value = "";
+            input1.value = "";
+            input2.value = "";
             alert.classList.remove("dismissible");
         } else {
-            id++;
-            container.querySelector("tbody")?.insertAdjacentHTML("beforeend", generateRow(id, input.value));
-            // Añadimos escuchador de eventos para el primer boton
-            container.querySelector("tbody").lastElementChild.firstElementChild.firstElementChild.addEventListener("click", (event) => {
-                deleteTask(event)
-            })
-            // Añadimos escuchador de eventos para el segundo boton
-            container.querySelector("tbody").lastElementChild.firstElementChild.nextElementSibling.firstElementChild.lastElementChild.addEventListener("click", (event) => {
-                editTask(event, false)
-            })
-            // Añadimos escuchador de eventos para el tercer boton
-            container.querySelector("tbody").lastElementChild.lastElementChild.firstElementChild.lastElementChild.addEventListener("click", (event) => {
-                removeTask(event, false)
-            })
-            // Añadimos escuchador de eventos para el editar el texto sin el boton
-            container.querySelector("tbody").lastElementChild.firstElementChild.lastElementChild.addEventListener("click", (event) => {
-                editTask(event, true)
-            })
-            message.classList.remove("dismissible");
-            
-            setTimeout(() => {
-                message.classList.add("dismissible");
-            }, 5000);
-
-            input.value = "";
+            addTask(id, container, message, input, input1, input2);
         }
         done = document.querySelectorAll(".fa-circle-check");  
     });  
@@ -122,28 +134,65 @@ window.addEventListener("load", () => {
 });
 
 // Funcion para generar una nueva fila (nueva nota) => refactoración
-const generateRow = (id, text) => {
+const generateRow = (id, text, date1, date2) => {
     //Opcion 1
     let newRow = `<tr id=${id} class="row task-file">
         <td class="col">
-            <i class='fa-solid fa-circle-check fa-2x'></i>
-            <span class='task' contenteditable='true' data-completed="false">${text}</span>
+            <i class="fa-solid fa-circle-check fa-2x"></i>
+            <span class="task" contenteditable="true" data-completed="false">${text}</span>
         </td>
-        <td class="col-1">
-            <span class='fa-stack fa-2x'>
-                <i class='fa-solid fa-square fa-stack-2x'></i>
-                <i class='fa-solid fa-pencil fa-stack-1x fa-inverse'></i>
+        <td class="col-2">
+            <span class="task" contenteditable="true" data-completed="false">${date1}</span>
+        </td>
+        <td class="col-2">
+            <span class="task" contenteditable="true" data-completed="false">${date2}</span>
+        </td>
+        <td class="col-1 text-center">
+            <span class="fa-stack fa-2x">
+                <i class="fa-solid fa-square fa-stack-2x"></i>
+                <i class="fa-solid fa-pencil fa-stack-1x fa-inverse"></i>
             </span>
         </td>
-        <td class="col-1">
-            <span class='fa-stack fa-2x'>
-                <i class='fa-solid fa-square fa-stack-2x'></i>
-                <i class='fa-solid fa-trash fa-stack-1x fa-inverse'></i>
+        <td class="col-1 text-center">
+            <span class="fa-stack fa-2x">
+                <i class="fa-solid fa-square fa-stack-2x"></i>
+                <i class="fa-solid fa-trash fa-stack-1x fa-inverse"></i>
             </span>
         </td>
     </tr>`
     return newRow
 
+}
+
+// Funcion añadir tarea
+const addTask = (id, container, message, input, input1, input2) => {
+    id++;
+    container.querySelector("tbody")?.insertAdjacentHTML("beforeend", generateRow(id, input.value, input1.valueAsDate.toLocaleDateString(), input2.valueAsDate.toLocaleDateString()));
+    // Añadimos escuchador de eventos para el primer boton
+    container.querySelector("tbody").lastElementChild.firstElementChild.firstElementChild.addEventListener("click", (event) => {
+        deleteTask(event)
+    })
+    // Añadimos escuchador de eventos para el segundo boton
+    container.querySelector("tbody").lastElementChild.lastElementChild.previousElementSibling.firstElementChild.lastElementChild.addEventListener("click", (event) => {
+        editTask(event, false)
+    })
+    // Añadimos escuchador de eventos para el tercer boton
+    container.querySelector("tbody").lastElementChild.lastElementChild.firstElementChild.lastElementChild.addEventListener("click", (event) => {
+        removeTask(event, false)
+    })
+    // Añadimos escuchador de eventos para el editar el texto sin el boton
+    container.querySelector("tbody").lastElementChild.firstElementChild.lastElementChild.addEventListener("focus", (event) => {
+        editTask(event, true)
+    })
+    message.classList.remove("dismissible");
+
+    setTimeout(() => {
+        message.classList.add("dismissible");
+    }, 5000);
+
+    input.value = "";
+    input1.value = "";
+    input2.value = "";
 }
 
 // Funcion para marcar las tareas como realizadas
@@ -176,13 +225,9 @@ const editTask = (event, onfocus) => {
     if (onfocus) {
         editask.target.classList.add("editable");
         document.addEventListener("keydown", (event) => {
-            // let text = editask.target.innerHTML.trim();
-            console.log(editask.target.textContent.trim().length);
-            
             if (event.code === "Escape") {
                 editask.target.classList.remove("editable");
                 editask.target.blur();
-                // if (editask.target.innerHTML === "" || editask.target.textContent.trim().length === 0) {
                 if (editask.target.textContent.trim().length === 0) {
                     removeTask(editask, true);
                 }
@@ -195,7 +240,7 @@ const editTask = (event, onfocus) => {
             editask.target.classList.remove("editable");
         });
     } else {
-        let editableTask = event.target.parentNode.parentNode.previousElementSibling.lastElementChild;
+        let editableTask = event.target.parentNode.parentNode.parentNode.firstElementChild.lastElementChild;
         editableTask.classList.add("editable");
         editableTask.focus();
     }

@@ -54,6 +54,7 @@ h1 {
 
 .main .button-group {
   height: 40px;
+  font-family: 'Lato', sans-serif;
 }
 
 .main form {
@@ -61,7 +62,6 @@ h1 {
 }
 
 .main label div {
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,14 +87,16 @@ h1 {
 
 .main input {
   display: block;
-  width: 80%;
   min-height: 60px;
   background-color: #bee5e3;
   padding: .5em;
-  font-size: 1.1rem;
+  font-size: .9em;
+  transition: all 0.15s ease-in-out;
+}
+
+.main input:first-child {
   border-bottom-left-radius: .3rem;
   border-top-left-radius: .3rem;
-  transition: all 0.15s ease-in-out;
 }
 
 .main input::placeholder {
@@ -183,13 +185,11 @@ h1 {
 }
 
 .main td:first-child {
-  width: 70%;
   font-size: 1.5rem;
 }
 
-.main td:nth-child(2), 
-.main td:nth-child(2) {
-  width: 15%;
+.main td:nth-child(4), 
+.main td:nth-child(5) {
   font-size: 1.1rem;
 }
 
@@ -204,11 +204,11 @@ h1 {
   transform: scale(1.2);
 }
 
-.main table td:nth-child(3) .fa-2x {
+.main table td:nth-child(5) .fa-2x {
   color: #dc3545;
 }
 
-.main table td:nth-child(3) .fa-2x {
+.main table td:nth-child(5) .fa-2x {
   color: #bb2d3b;
 }
 

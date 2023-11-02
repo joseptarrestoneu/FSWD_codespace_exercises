@@ -13,19 +13,19 @@ Obligatorias:
 Optativas:
 [x] Al enviar una tarea hacer aparecer un alert verde con el contenido: "Tarea añadida satisfactoriamente" i que desaparezca a los 5 segundos.
 [ ] Crear atajos de teclado:
-        - Tabulador: vaciar contenido del input (nueva tarea)
-        - Control + Insert: el foco aparece en el input para introducir una nueva tarea.
-        - Control + Shift + S: añadir tarea a la lista. Si no hay contenido aparece la alerta roja.
-        - Control + Shift + F1: elimina la primera tarea de la tabla.
-        - Control + Shift + F2: elimina la última tarea de la tabla.
-        - Control + Shift + F5: activa el modo de edicion de la primera tarea de la tabla.
-        - Control + Shift + F6: activa el modo de edicion de la última tarea de la tabla.
-        - Control + Supr: vacia toda la tabla de tareas.
+        [x] Tabulador: vaciar contenido del input (nueva tarea)
+        [x] Control + Insert: el foco aparece en el input para introducir una nueva tarea.
+        [x] Control + Shift + S: añadir tarea a la lista. Si no hay contenido aparece la alerta roja.
+        [x] Control + Shift + F1: elimina la primera tarea de la tabla.
+        [x] Control + Shift + F2: elimina la última tarea de la tabla.
+        [x] Control + Shift + F5: activa el modo de edicion de la primera tarea de la tabla.
+        [x] Control + Shift + F6: activa el modo de edicion de la última tarea de la tabla.
+        [x] Control + Supr: vacia toda la tabla de tareas.
 Bonus: 
-[ ] Añadir un dataPicker:
-        - Uno para la fecha de inicio de la tarea.
-        - Uno para la fecha final de la tarea.
-    Al añadir la tarea guardar la fecha de inicio i final de la tarea.
+[x] Añadir un dataPicker:
+        [x] Uno para la fecha de inicio de la tarea.
+        [x] Uno para la fecha final de la tarea.
+    [x] Al añadir la tarea guardar la fecha de inicio i final de la tarea.
 [ ] Añadir icono "gear" a position absolut top=20px i a right=0px i z-index=3. Al hacer click canviar a modo oscuro:
         - Colores del título (Task List)
         - Colores de los botones el filtro
