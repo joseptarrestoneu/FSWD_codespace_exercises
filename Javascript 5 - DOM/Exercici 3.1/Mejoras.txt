@@ -26,9 +26,9 @@ Bonus:
         [x] Uno para la fecha de inicio de la tarea.
         [x] Uno para la fecha final de la tarea.
     [x] Al añadir la tarea guardar la fecha de inicio i final de la tarea.
-[ ] Añadir icono "gear" a position absolut top=20px i a right=0px i z-index=3. Al hacer click canviar a modo oscuro:
+[x] Añadir icono "gear" a position absolut top=20px i a right=0px i z-index=3. Al hacer click canviar a modo oscuro:
         - Colores del título (Task List)
         - Colores de los botones el filtro
         - Colores del formulario
         - Colores de la cabecera de la tabla
-[ ] Añadir filtro de fechas de la tabla de tareas
+[ ] Añadir orden (ascendents i descendente) de fechas (inicio i fin) de la tabla de tareas

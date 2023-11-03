@@ -15,6 +15,7 @@ window.addEventListener("load", () => {
     let buttonAll = document.querySelector(".all");
     let buttonToDo = document.querySelector(".todo");
     let buttonDone = document.querySelector(".done");
+    let darkMode = document.querySelector(".light");
 
     window.addEventListener("keydown", (event) => {
         if (event.ctrlKey && event.code == "F8" ) {
@@ -167,7 +168,9 @@ const generateRow = (id, text, date1, date2) => {
 // Funcion añadir tarea
 const addTask = (id, container, message, input, input1, input2) => {
     id++;
-    container.querySelector("tbody")?.insertAdjacentHTML("beforeend", generateRow(id, input.value, input1.valueAsDate.toLocaleDateString(), input2.valueAsDate.toLocaleDateString()));
+
+    // // Control de fechas. Permitimos entrar tareas sin fecha. Si nos viene sin fechas devolvemos string vacio
+    container.querySelector("tbody")?.insertAdjacentHTML("beforeend", generateRow(id, input.value, input1.valueAsDate?.toLocaleDateString() || "", input2.valueAsDate?.toLocaleDateString()  || ""));
     // Añadimos escuchador de eventos para el primer boton
     container.querySelector("tbody").lastElementChild.firstElementChild.firstElementChild.addEventListener("click", (event) => {
         deleteTask(event)
@@ -256,4 +259,19 @@ const filtrar = (element) => {
             }
         }) 
     });
+}
+
+// Modo oscuro
+function changeLight() {
+    let main = document.querySelector(".main");
+    let body = document.querySelector(".total");
+    let icon = document.querySelector("#light");
+    
+    if (icon.getAttribute("class") !== "fa-solid fa-moon") {
+        icon.setAttribute("class","fa-solid fa-moon");
+    } else {
+        icon.setAttribute("class","fa-solid fa-sun light-mode");
+    }
+    main.classList.toggle("dark")
+    body.classList.toggle("dark-mode")
 }

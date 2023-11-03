@@ -27,10 +27,8 @@
   box-sizing: inherit;
 }
 
-
 body {
   width: 100%;
-  height: 100vh;
   font-family: 'Lato', sans-serif;
   background-color: #c9d6ff;
   background-image: linear-gradient(to right, #e2e2e2, #c9d6ff);
@@ -41,11 +39,56 @@ h1 {
   font-size: 3.9rem;
 }
 
+.dark-mode {
+  background-color: var(--black);
+  background-image: none;
+}
+
+#light {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  z-index: 3;
+  font-size: 1.3em;
+}
+
+.light-mode {
+  color: white;
+}
+
 .main {
   width: 80%;
   padding: 2em;
   margin: 10% auto;
   background-color: white;
+  border-radius: .3rem;
+}
+
+.dark {
+  background-color: rgb(33, 32, 32);
+  color: white;
+}
+
+.dark thead tr th {
+  background-color: #7209b7;
+}
+
+.dark button {
+  background-color: #7209b7;
+  border: #7209b7;
+}
+
+.dark button:hover {
+  background-color: #480ca8;
+  border: #480ca8;
+}
+
+.dark .arrow {
+  background-color: #7209b7;
+}
+
+.dark .arrow:hover {
+  background-color: #480ca8;
 }
 
 .main .container {
@@ -53,6 +96,7 @@ h1 {
 }
 
 .main .button-group {
+  padding: 0;
   height: 40px;
   font-family: 'Lato', sans-serif;
 }
@@ -66,15 +110,15 @@ h1 {
   justify-content: center;
   align-items: center;
   padding: .5em;
-  background-color: var(--blue);
+  background-color: #0B6EFD;
+  color: white;
   font-size: 1.1rem;
   border-bottom-right-radius: .3rem;
   border-top-right-radius: .3rem;
-  transition: all 0.4s ease-in-out;
 }
 
 .main label div:hover {
-  background-color: #0b5ed7;
+  background-color: #1553aa;
 }
 
 .main label div .fa-solid {
@@ -90,8 +134,12 @@ h1 {
   min-height: 60px;
   background-color: #bee5e3;
   padding: .5em;
-  font-size: .9em;
+  font-size: 1.1em;
   transition: all 0.15s ease-in-out;
+}
+
+.dark input {
+  background-color: white;
 }
 
 .main input:first-child {
@@ -106,7 +154,15 @@ h1 {
 .main input:focus {
   border: 5px solid transparent;
   border-radius: .3rem;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  z-index: 2;
+}
+
+.dark input:focus {
+  border: 5px solid transparent;
+  border-radius: .3rem;
+  background-color: rgb(250, 248, 216);
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
   z-index: 2;
 }
@@ -122,7 +178,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  transition: all 0.3s linear;
+  transition: all 0.3s li;
 }
 
 .main .alert .fa-solid {
@@ -159,15 +215,41 @@ h1 {
   background-color: #f6f6f6;
 }
 
+.main thead tr {
+  border-radius: .3rem;
+}
+
+.main thead th {
+  position: relative;
+}
+
+.main thead th:nth-child(1),
+.main thead th:nth-child(2),
+.main thead th:nth-child(3) {
+  padding-left: 40px;
+}
+
+.main thead i {
+  position: absolute;
+  left: 12px;
+  top: 15px
+}
+
+.main tbody tr:last-child {
+  border-bottom-left-radius: .3rem;
+  border-bottom-right-radius: .3rem;
+}
+
 .main tr:nth-of-type(odd) {
   background-color: #e9e9e9;
 }
 
 .main th {
-  background-color: #2980d9;
+  background-color: #0B6EFD;
+  color: white;
   padding: .5em;
-  font-weight: 700;
-  font-size: 1.5rem;
+  font-weight: 400;
+  font-size: 1.2em;
   text-transform: capitalize;
 }
 
@@ -182,19 +264,29 @@ h1 {
 .main td {
   font-family: 'Fredoka', sans-serif;
   padding: .8em;
+  display: flex;
+  align-items: center;
+  color: black
 }
 
-.main td:first-child {
-  font-size: 1.5rem;
+.main td:nth-child(1), 
+.main td:nth-child(2),
+.main td:nth-child(3) {
+  font-size: 1.1em;
+}
+.main td:nth-child(2),
+.main td:nth-child(3) {
+  justify-content: center;
 }
 
 .main td:nth-child(4), 
 .main td:nth-child(5) {
   font-size: 1.1rem;
+  justify-content: center;
 }
 
 .main table .fa-2x {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: var(--yellow);
   transition: all 0.3s ease-in-out;
 } 
@@ -230,8 +322,11 @@ h1 {
   margin-top: .3em;
 }
 
+.dark table .editable {
+  background-color: rgb(250, 248, 216);
+}
+
 .main .dismissible {
-  /* display: none; */
   opacity: 0 !important;
   height: 0 !important;
   padding: 0 !important;
@@ -242,6 +337,20 @@ h1 {
   display: none;
 }
 
+footer {
+  bottom: 0;
+  width: 100%;
+  padding: 2rem 30px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  font-size: 0.9em;
+}
+
+footer a {
+  text-decoration: none;
+}
+
   /* Bostrap breackpoints */
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
@@ -250,7 +359,7 @@ h1 {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  /* here your code */  
+  
 }
 
 /* Large devices (desktops, 992px and up) */
