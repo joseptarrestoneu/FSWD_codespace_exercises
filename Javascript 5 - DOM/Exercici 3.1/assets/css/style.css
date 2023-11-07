@@ -339,8 +339,8 @@ h1 {
 
 footer {
   bottom: 0;
+  left: 0;
   width: 100%;
-  padding: 2rem 30px;
   position: fixed;
   display: flex;
   justify-content: center;
@@ -354,7 +354,12 @@ footer a {
   /* Bostrap breackpoints */
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
-  /* here your code */  
+  #title {
+    flex-wrap: wrap;
+    padding: 0;
+    height: 40px;
+    font-family: 'Lato', sans-serif;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */

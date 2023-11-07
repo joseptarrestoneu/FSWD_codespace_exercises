@@ -1,0 +1,54 @@
+/* :root {
+  font-size: 0.785;
+  --black: #000;
+  --blue: #0d6ef2;
+  --cyan: #0dcaf0;
+  --green: #198754;
+  --indigo: #6610f2;
+  --orange: #fd7e14;
+  --puerple: #6f42c1;
+  --pink: #d63384;
+  --red: #dc3545;
+  --teal: #20c997;
+  --yellow: #ffc107;
+  --white: #fff;
+  --day: #FFBF00;
+  --night: #298662;
+  box-sizing: border-box;
+  outline: 0 none;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: inherit;
+} */
+
+/* Bostrap breackpoints */
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* here your code */  
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* here your code */  
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  /* here your code */  
+}
